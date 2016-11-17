@@ -23,54 +23,39 @@
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-                <h3>Grupo 1</h3>
+                <h3>Menu</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Links Multiples<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-home"></i> Mis paquetes<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Mis paquetes</a></li>
+                            <li><a href="#">Alertados y pendientes de recibo en Miami</a></li>
+                            <li><a href="#">Retenidos en Miami</a></li>
+                            <li><a href="#">En transito</a></li>
+                            <li><a href="#">Etregados</a></li>
+                            <li><a href="#">Retenidos</a></li>
+                            <li><a href="#">Alertanos tus compras</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-laptop"></i>
-                            One link
-                            <span class="label label-success pull-right">Bandera</span>
-                        </a>
+                </ul>
+
+                <ul class="nav side-menu">
+                    <li><a><i class="fa fa-home"></i>Buscar<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="#">Por lista de desconocidos</a></li>
+                            <li><a href="#">Por guía aérea o # de tracking internacional</a></li>
+                            <li><a href="#">Por guía aérea o # de tracking D domestico USA emitido por la tienda</a></li>
+                        </ul>
                     </li>
                 </ul>
-            </div>
-            <div class="menu_section">
-                <h3>Group 2</h3>
+
                 <ul class="nav side-menu">
-                    <li>
-                        <a><i class="fa fa-sitemap"></i> Menu Multinivel<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-home"></i>Volver<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li>
-                                <a href="#">Nivel 1</a>
-                                <li>
-                                    <a>Nivel 2<span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li class="sub_menu">
-                                            <a href="#">Nivel 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Nivel 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Nivel 3</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            <li>
-                                <a href="#">Nivel 3</a>
-                            </li>
+                            <li><a href="#">Volver al menu principal</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        
         </div>
         <!-- /sidebar menu -->
         
