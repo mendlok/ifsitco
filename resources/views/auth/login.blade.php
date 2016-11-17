@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>IFS | </title>
-    
+
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Font Awesome -->
@@ -27,7 +27,7 @@
             <section class="login_content">
                 <form method="post" action="{{ url('/login') }}">
                     {!! csrf_field() !!}
-                    
+
                     <h1>Inicio de Sesión</h1>
                     <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
                         <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
@@ -38,7 +38,7 @@
                 </span>
                         @endif
                     </div>
-                    
+
                     <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
                         <input type="password" class="form-control" placeholder="Contraseña" name="password">
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -47,23 +47,23 @@
                   <strong>{{ $errors->first('password') }}</strong>
                 </span>
                         @endif
-                    
+
                     </div>
                     <div>
                         <input type="submit" class="btn btn-default submit" value="Iniciar Sesión">
                         <a class="reset_pass" href="{{  url('/password/reset') }}">Perdiste tu contraseña?</a>
                     </div>
-                    
+
                     <div class="clearfix"></div>
-                    
+
                     <div class="separator">
                         <p class="change_link">Eres nuevo en el sitio?
-                            <a href="{{ url('/register') }}" class="to_register"> Create una cuenta</a>
+                            <a href="{{ url('/profile_register') }}" class="to_register"> Create una cuenta</a>
                         </p>
-                        
+
                         <div class="clearfix"></div>
                         <br />
-                        
+
                         <div>
                             <h1><i class="fa fa-paw"></i>IFS</h1>
                             <p>©2016 Todos los derechos reservados. ITCO Costa Rica.</p>

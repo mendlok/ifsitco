@@ -36,7 +36,7 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        $courrier = $request['courrier'];
+        $courrier = $request['carrier'];
         $tracking = $request['tracking'];
         $shop = $request['shop'];
         $value = $request['value'];

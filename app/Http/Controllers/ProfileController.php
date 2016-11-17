@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Profile;
-
+use App\User;
 class ProfileController extends Controller
 {
     /**
@@ -40,7 +40,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-      
+
       $name = $request['name'];
       $last_name = $request['lastname'];
       $DNI = $request['id'];
@@ -69,7 +69,14 @@ class ProfileController extends Controller
       $profile->address = $address;
       $profile->express = "yes";
       $profile->save();
-      return $profile;
+      User::create([
+      'name' => $request['name'],
+      'email' => $request['email'],
+      'password' => bcrypt($request['password']),
+      'profile_id' => $profile->id
+      ]);
+      return redirect()->back();
+
     }
 
     /**
