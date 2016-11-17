@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentellela Alela! | </title>
+    <title>Registro</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -21,7 +21,7 @@
 </head>
 
 <body class="login" style="margin-top:6%;">
-  <h1 style="margin-left: 41%;">Create User</h1>
+  <h1 style="margin-left: 41%;">Registro</h1>
   <div id="wizard" class="form_wizard wizard_horizontal" >
       <ul class="wizard_steps anchor">
         <li>
@@ -178,8 +178,7 @@
                   <option value="09">Septiembre</option>
                   <option value="10">Octubre</option>
                   <option value="11">Noviembre</option>
-                  <option value="12">Diciembre</option>
-            </select>
+                  <option value="12">Diciembre</option></select>
             <select name="ageYear" id="ageYear">
               <option value="1900">1900</option>
               <option value="1901">1901</option>
@@ -321,7 +320,7 @@
               <input id="cellphone" name="cellphone" required="required" class="form-control col-md-7 col-xs-12" type="text">
             </div>
           </div>
-          
+
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Ubicación<span class="required">*</span>
             </label>
