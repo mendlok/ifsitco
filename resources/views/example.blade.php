@@ -57,6 +57,8 @@
                         </li>
                         <li><a href="#research" data-toggle="tab" aria-expanded="false"><i class="fa fa-search"></i>Buscar</a>
                         </li>
+                        <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-search"></i>Usuario</a>
+                        </li>
                       </ul>
                     </div>
 
@@ -66,7 +68,7 @@
                         <div class="tab-pane active" id="mipack">
                           <p class="lead">Mis paquetes</p>
                           <ul class="nav nav-tabs tabs-left">
-                          <li class=""><a href="{{url('/mypackages')}}">Mis paquetes</a>
+                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Mis paquetes</a>
                         </li>
 
                         <li class=""><a href="#alertmiami" data-toggle="tab" aria-expanded="false">  Alertados y pendientes de recibo en Miami</a>
@@ -148,7 +150,7 @@
     <!-- /page content -->
 
     <!-- footer content -->
-
+   
 
     <script type="text/javascript">
       $(document).ready(function(){

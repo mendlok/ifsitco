@@ -11,6 +11,17 @@
 
 @section('main_container')
 
+
+    <style>
+      
+      .centered-items tr > td{
+      text-align: center;
+      }
+
+      .centered-head tr > th{
+        text-align: center;
+      }
+    </style>
     <!-- page content -->
     <div class="right_col" role="main">
         <h1>Mis paquetes</h1>
@@ -18,12 +29,12 @@
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
                 <div class="col-lg-12 col-sm-6 col-xs-12" >
-                 <div class="col-lg-4 col-sm-6 col-xs-12 " >
+                 <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                 <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 152px;">
                 <br>
                     <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
                 </div>
-                 <div class="col-md-8 col-sm-6 col-xs-12">
+                 <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Paquetes Entregados</h2>
@@ -33,27 +44,27 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
+                  <div class="x_content" style="text-align: center !important;">
 
-                    <table class="table">
-                      <thead>
+                    <table class="col-md-12" >
+                      <thead class="centered-head" >
                         <tr>
-                          <th>Courier</th>
-                          <th>Tracking</th>
-                          <th>Descrición</th>
-                          <th>Valor</th>
-                          <th>Estado</th>
-                          <th>Factura interna</th>
+                          <th class="col-md-2">Courier</th>
+                          <th class="col-md-2">Tracking</th>
+                          <th class="col-md-2" >Descrición</th>
+                          <th class="col-md-2">Valor</th>
+                          <th class="col-md-2">Estado</th>
+                          <th class="col-md-2">Factura interna</th>
                         </tr>
                       </thead>
-                      <tbody >
+                      <tbody class="centered-items">
                       <tr>
-                         <th style="text-align: center;">{{$package->courrier}}</th>
-                          <th style="text-align: center;">{{$package->tracking}}</th>
-                          <td style="text-align: center;">{{$package->product_description}}</td>
-                          <td style="text-align: center;">{{$package->value}}</td>
-                          <td style="text-align: center;">{{$package->courrier}}</td>
-                          <td style="text-align: center;">{{$package->courrier}}</td>
+                         <td class="col-md-2">{{$package->courrier}}</td>
+                          <td class="col-md-2">{{$package->tracking}}</td>
+                          <td class="col-md-2">{{$package->product_description}}</td>
+                          <td class="col-md-2">{{$package->value}}</td>
+                          <td class="col-md-2">{{$package->courrier}}</td>
+                          <td class="col-md-2">{{$package->courrier}}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -69,11 +80,6 @@
     <!-- /page content -->
 
     <!-- footer content -->
-    <footer>
-        <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-        </div>
-        <div class="clearfix"></div>
-    </footer>
+ 
     <!-- /footer content -->
 @endsection
