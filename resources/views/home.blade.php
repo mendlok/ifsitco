@@ -80,7 +80,7 @@
                         </li>
                            <li class=""><a href="#" data-toggle="tab" > Retenidos por falta de Factura Comercial</a>
                         </li>
-                           <li class=""><a href="{{ url('/newalert')}} "> Alértanos tus compras</a>
+                           <li class=""><a href="{{ url('/newpackage')}} "> Alértanos tus compras</a>
                         </li>
                           </ul>
                         </div>
