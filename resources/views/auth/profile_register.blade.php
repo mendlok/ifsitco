@@ -295,7 +295,7 @@
           </div>
       </div>
       <div id="step-3" class="content form-horizontal form-label-left" style="display: block;">
-      
+
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone">Telefono<span class="required">*</span>
             </label>
