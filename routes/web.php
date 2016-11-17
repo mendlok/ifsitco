@@ -26,4 +26,4 @@ Route::get('/add_package','PackageController@store');
 
 Route::get('/add_profile','ProfileController@store');
 
-Route::get('/example',function FunctionName(){return view('example'))};
+Route::get('/example',function(){return view('example');});
