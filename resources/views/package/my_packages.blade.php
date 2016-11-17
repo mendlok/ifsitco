@@ -14,11 +14,12 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <h1>Mis paquetes</h1>
+        @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
                 <div class="col-lg-12 col-sm-6 col-xs-12" >
                  <div class="col-lg-4 col-sm-6 col-xs-12 " >
-                <img src="{{ asset('images/box.png') }}" class="img-responsive fotos">
+                <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 152px;">
                 <br>
                     <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
                 </div>
@@ -46,15 +47,14 @@
                         </tr>
                       </thead>
                       <tbody >
-                        <tr>
-                         <th style="text-align: center;">44</th>
-                          <th style="text-align: center;">4</th>
-                          <td style="text-align: center;">Nitendo 2Ds</td>
-                          <td style="text-align: center;">120000</td>
-                          <td style="text-align: center;">Entregado</td>
-                          <td style="text-align: center;">122</td>
+                      <tr>
+                         <th style="text-align: center;">{{$package->courrier}}</th>
+                          <th style="text-align: center;">{{$package->tracking}}</th>
+                          <td style="text-align: center;">{{$package->product_description}}</td>
+                          <td style="text-align: center;">{{$package->value}}</td>
+                          <td style="text-align: center;">{{$package->courrier}}</td>
+                          <td style="text-align: center;">{{$package->courrier}}</td>
                         </tr>
-
                       </tbody>
                     </table>
 
@@ -64,6 +64,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
     <!-- /page content -->
 

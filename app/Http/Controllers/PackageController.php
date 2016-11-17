@@ -36,7 +36,7 @@ class PackageController extends Controller
      */
      public function mypackages()
      {
-       $packages = Package::where('id',Auth::user()->profile_id)->get();
+       $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
        return view('package\my_packages',compact('packages'));
 
      }
