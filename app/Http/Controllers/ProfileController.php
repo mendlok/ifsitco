@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Profile;
 
 class ProfileController extends Controller
 {
@@ -39,7 +40,21 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $profile = new Profile();
+      $profile->name = $request['name'];
+      $profile->last_name = $request['last_name'];
+      $profile->client_type = "client";
+      $profile->DNI = $request['dni'];
+      $profile->sex = "m";
+      $profile->phone = $request['phone'];
+      $profile->cellphone = $request['cellphone'];
+      $profile->nacionality = "Costa Rica";
+      $profile->provinces = $request['province'];
+      $profile->district = $request['district'];
+      $profile->address = $request['address'];
+      $profile->express = "yes";
+      return $profile->save();
+
     }
 
     /**
