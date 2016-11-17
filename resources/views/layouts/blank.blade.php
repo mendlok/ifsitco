@@ -64,8 +64,8 @@
 </script>
         @stack('scripts')
   <footer>
-        <div class="pull-right">
-            Desarrollado por ITCO Costa Rica<a href="https://colorlib.com">Todos los derechos reservados</a>
+        <div class="pull-right" style="">
+            <p style="text-align: center;">Desarrollado por ITCO Costa Rica.<a href="https://colorlib.com">Todos los derechos reservados</a></p>
         </div>
         <div class="clearfix"></div>
     </footer>
