@@ -40,12 +40,14 @@ class PackageController extends Controller
         $tracking = $request['tracking'];
         $shop = $request['shop'];
         $value = $request['value'];
+        $description = $request['description'];
         $package =  new Package();
         $package ->courrier = $courrier;
         $package ->tracking = $tracking;
         $package ->tracking = $tracking;
         $package ->shop = $shop;
-        $package ->product_description = $value;
+        $package ->value = $value;
+        $package ->product_description = $description;
         $package->save();
 
         return redirect()->back();
