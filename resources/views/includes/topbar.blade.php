@@ -17,7 +17,7 @@
                         <li><a href="{{ url('/myprofile') }}"> Perfil</a></li>
                         <li>
                             <a href="javascript:;">
-                                <span class="badge bg-red pull-right">50%</span>
+                                <span class="badge bg-red pull-right"></span>
                                 <span>Ajustes</span>
                             </a>
                         </li>
