@@ -101,13 +101,13 @@
                         <div class="tab-pane active" id="searchta" >
                           <p class="lead">Busca por lista de desconocidas</p>
                           <p> Identifica tus paquetes en nuestra lista de desconocidos: Ingresa el # de tracking Fedex, DHL, UPS…</p>
-                          <div class="input-group">
+                          <form class="input-group">
                               <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
-                               <input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
-                          </div>
+                               <input type="text" id="tracking" class="form-control" placeholder="#" aria-describedby="basic-addon1">
                           <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-default ">Buscar</button>
+                            <button type="submit" class="btn btn-default ">Buscar</button>
                           </div>
+                          </form>
                         </div>
                         <div class="tab-pane" id="searchinter">
                                <p class="lead">Busca por guía aérea o # de tracking internacional: </p>
