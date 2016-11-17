@@ -56,10 +56,8 @@
 
 
 
-
-    <div class="stepContainer"><div id="step-1" class="content" style="display: none;">
-        <form class="form-horizontal form-label-left">
-
+<form>
+    <div class="stepContainer form-horizontal form-label-left"><div id="step-1" class="content" style="display: none;">
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email<span class="required">*</span>
             </label>
@@ -89,13 +87,8 @@
             </div>
           </div>
 
-        </form>
-
       </div>
-      <div id="step-2" class="content" style="display: none;">
-
-        <form class="form-horizontal form-label-left">
-
+      <div id="step-2" class="content form-horizontal form-label-left" style="display: none;">
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre<span class="required">*</span>
             </label>
@@ -298,14 +291,11 @@
               <option value="2015">2015</option>
               <option value="2016">2016</option>
             </select>
-
             </div>
           </div>
-
-        </form>
       </div>
-      <div id="step-3" class="content" style="display: block;">
-        <form class="form-horizontal form-label-left">
+      <div id="step-3" class="content form-horizontal form-label-left" style="display: block;">
+      
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="phone">Telefono<span class="required">*</span>
             </label>
@@ -340,8 +330,8 @@
               <textarea id="address" class="form-control col-md-7 col-xs-12" name="password" type="text"></textarea>
             </div>
           </div>
-        </form>
       </div>
+  </form>
 <script src="https://colorlib.com/polygon/vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
 <script src="https://colorlib.com/polygon/vendors/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
 <script src="https://colorlib.com/polygon/vendors/fastclick/lib/fastclick.js" charset="utf-8"></script>
