@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Package;
 use Illuminate\Http\Request;
-
+use Auth;
 class PackageController extends Controller
 {
     /**
@@ -48,8 +48,8 @@ class PackageController extends Controller
         $package ->shop = $shop;
         $package ->value = $value;
         $package ->product_description = $description;
+        $package->profile_id = Auth::user()->profile_id;
         $package->save();
-
         return redirect()->back();
     }
 

@@ -20,7 +20,7 @@ class ProfileController extends Controller
 
     public function MyProfile()
     {
-      $profile = Profile::where('id',Auth::user()->id)->get();
+      $profile = Profile::where('id',Auth::user()->profile_id)->get();
       return view('profile\profile',compact('profile'));
     }
 

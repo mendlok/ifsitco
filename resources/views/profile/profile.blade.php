@@ -44,7 +44,12 @@
                         <!-- end of image cropping -->
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="{{asset ('images/man.png') }}" alt="Avatar" title="Change the avatar" style="height: 208px;">
+                          <img class="img-responsive avatar-view" src="{{asset ('images/man.png') }}"
+                          @foreach($profile as $profiles)
+                            @if($profiles->sex = "m")
+                            @endif
+                          @endforeach
+                          alt="Avatar" title="Change the avatar" style="height: 208px;">
 
                           <!-- Cropping modal -->
                           <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
