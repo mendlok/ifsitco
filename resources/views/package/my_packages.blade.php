@@ -14,7 +14,7 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <h1>Mis paquetes</h1>
-        <div class="container menu" style="background-color: white;">
+        <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
                 <div class="col-lg-12 col-sm-6 col-xs-12" >
                  <div class="col-lg-4 col-sm-6 col-xs-12 " >
