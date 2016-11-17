@@ -321,7 +321,7 @@
               <input id="canton" name="canton" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Cantón">
             </div>
              <div class="col-md-2 col-sm-6 col-xs-12">
-              <input id="district" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Distrito">
+              <input id="district" name="district" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Distrito">
             </div>
           </div>
           <div class="form-group">
