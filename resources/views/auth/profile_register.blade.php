@@ -93,20 +93,20 @@
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="first-name" required="required" class="form-control col-md-7 col-xs-12" type="text">
+              <input id="first-name" name="name" required="required" class="form-control col-md-7 col-xs-12" type="text">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellidos<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12" type="text">
+              <input id="last-name" name="lastname" required="required" class="form-control col-md-7 col-xs-12" type="text">
             </div>
           </div>
           <div class="form-group">
             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Idetificación<span class="required">*</span></label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="middle-name" class="form-control col-md-7 col-xs-12" name="middle-name" type="text">
+              <input id="middle-name" class="form-control col-md-7 col-xs-12" name="dni" type="text">
             </div>
           </div>
           <div class="form-group">
@@ -315,10 +315,10 @@
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Ubicación<span class="required">*</span>
             </label>
             <div class="col-md-2 col-sm-6 col-xs-12">
-              <input id="province" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Provincia">
+              <input id="province" name="province" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Provincia">
             </div>
              <div class="col-md-2 col-sm-6 col-xs-12">
-              <input id="canton" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Cantón">
+              <input id="canton" name="canton" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Cantón">
             </div>
              <div class="col-md-2 col-sm-6 col-xs-12">
               <input id="district" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" placeholder="Distrito">
@@ -327,7 +327,7 @@
           <div class="form-group">
             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"  for="address">Dirección Exacta<span class="required">*</span></label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <textarea id="address" class="form-control col-md-7 col-xs-12" name="password" type="text"></textarea>
+              <textarea id="address" class="form-control col-md-7 col-xs-12" name="addres" type="text"></textarea>
             </div>
           </div>
       </div>
