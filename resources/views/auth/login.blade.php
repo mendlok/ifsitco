@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Gentellela Alela! | </title>
+    <title>IFS | </title>
     
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -28,7 +28,7 @@
                 <form method="post" action="{{ url('/login') }}">
                     {!! csrf_field() !!}
                     
-                    <h1>Login Form</h1>
+                    <h1>Inicio de Sesión</h1>
                     <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
                         <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -40,7 +40,7 @@
                     </div>
                     
                     <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <input type="password" class="form-control" placeholder="Password" name="password">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password">
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         @if ($errors->has('password'))
                             <span class="help-block">
@@ -50,23 +50,23 @@
                     
                     </div>
                     <div>
-                        <input type="submit" class="btn btn-default submit" value="Log in">
-                        <a class="reset_pass" href="{{  url('/password/reset') }}">Lost your password?</a>
+                        <input type="submit" class="btn btn-default submit" value="Iniciar Sesión">
+                        <a class="reset_pass" href="{{  url('/password/reset') }}">Perdiste tu contraseña?</a>
                     </div>
                     
                     <div class="clearfix"></div>
                     
                     <div class="separator">
-                        <p class="change_link">New to site?
-                            <a href="{{ url('/register') }}" class="to_register"> Create Account </a>
+                        <p class="change_link">Eres uevo en el sitio?
+                            <a href="{{ url('/register') }}" class="to_register"> Create una cuenta</a>
                         </p>
                         
                         <div class="clearfix"></div>
                         <br />
                         
                         <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                            <h1><i class="fa fa-paw"></i>IFS</h1>
+                            <p>©2016 Todos los derechos reservados. Itco Costa Rica.</p>
                         </div>
                     </div>
                 </form>
