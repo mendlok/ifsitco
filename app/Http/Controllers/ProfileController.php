@@ -14,7 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('auth\profile_register');
+        return view('auth\profile_example');
     }
 
     public function MyProfile()
