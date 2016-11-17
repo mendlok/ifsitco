@@ -22,7 +22,7 @@
             </div>
             <div class="x_content">
 
-                <form class="form-horizontal form-label-left input_mask">
+                <form class="form-horizontal form-label-left input_mask" action="{{ulr('')}}">
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Carrier</label>
 
