@@ -21,6 +21,8 @@
     <!-- Custom Theme Style -->
     <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
 
+    <link href="{{ asset("css/styleifs.css") }}" rel="stylesheet">
+
         @stack('stylesheets')
 
     </head>

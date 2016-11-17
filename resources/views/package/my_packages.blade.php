@@ -44,7 +44,7 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content" style="text-align: center !important;">
+                  <div class="x_content">
 
                     <table class="col-md-12" >
                       <thead class="centered-head" >
