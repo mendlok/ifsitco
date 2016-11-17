@@ -248,7 +248,7 @@
             <div class="container menu" style="background-color: white;">
             <div class="rows" style="margin:2%;">
                  <div class="col-lg-2 col-sm-6 col-xs-12 " >
-                <img src="image/foto4.png" class="img-responsive fotos">
+                <img src="{{ asset('images/foto4.png') }}" class="img-responsive fotos">
                 <br>
                     <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
                 </div>
