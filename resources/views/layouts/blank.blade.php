@@ -65,7 +65,7 @@
         @stack('scripts')
   <footer>
         <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Desarrollado por ITCO Costa Rica<a href="https://colorlib.com">Todos los derechos reservados</a>
         </div>
         <div class="clearfix"></div>
     </footer>
