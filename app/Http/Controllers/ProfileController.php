@@ -40,35 +40,36 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+      
       $name = $request['name'];
-      $last_name = $request['last_name'];
-      $DNI = $request['dni'];
+      $last_name = $request['lastname'];
+      $DNI = $request['id'];
       $birth_date = $request['shop'];
       $phone =  $request['phone'];
       $cellphone =  $request['cellphone'];
-      $nacionality = "Costa Rica";
-      $provinces =  "San Jose";
-      $canton =  "Desamparados";
-      $district =  "Desamparados";
+      $nacionality = $request['nacionality'];
+      $provinces =  $request['province'];
+      $canton =  $request['canton'];
+      $district =  $request['district'];
       $address = $request['address'];
       $sex = $request['sex'];
       $email = $request['email'];
       $password = $request['password'];
       $profile = new Profile();
-      $profile->name = "Kenneth";
-      $profile->last_name = "Kenneth";
+      $profile->name = $name;
+      $profile->last_name = $last_name;
       $profile->client_type = "client";
-      $profile->DNI = "1233456";
-      $profile->sex = "m";
-      $profile->phone = "1452552";
+      $profile->DNI = $DNI;
+      $profile->sex = $sex;
+      $profile->phone = $phone;
+      $profile->cellphone = $cellphone;
       $profile->nacionality = $nacionality;
       $profile->provinces = $provinces;
       $profile->district = $district;
-      $profile->address = "412364454";
+      $profile->address = $address;
       $profile->express = "yes";
       $profile->save();
-      return $profile->save();
-
+      return $profile;
     }
 
     /**

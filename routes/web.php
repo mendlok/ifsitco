@@ -13,8 +13,13 @@
 
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
+
 Route::get('/', 'HomeController@index');
+
 Route::get('/profile_register','ProfileController@index');
+
 Route::get('/myprofile','ProfileController@MyProfile');
+
 Route::get('/newpackage','PackageController@index');
+
 Route::get('/add_profile','ProfileController@store');

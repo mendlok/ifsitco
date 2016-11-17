@@ -46,7 +46,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellido <span class="required"></span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                      <input id="last-name" placeholder="Apellido" name="last_name" required="required" class="form-control col-md-7 col-xs-12" type="text">
+                      <input id="last-name" placeholder="Apellido" name="lastname" required="required" class="form-control col-md-7 col-xs-12" type="text">
                   </div>
               </div>
 
@@ -62,7 +62,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="cell">Celular <span class="required"></span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                      <input id="cell" name="txt_cell" placeholder="Celular" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="tel">
+                      <input id="cell" name="cellphone" placeholder="Celular" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="tel">
                   </div>
               </div>
 
@@ -81,7 +81,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="selec_sex">Nacionalidad <span class="required"></span>
                   </label>
                   <div class="col-md-6 col-sm-6 col-xs-12">
-                       <input id="nacionality" name="cell" placeholder="Nacionalidad" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="tel">
+                       <input id="nacionality" name="nacionality" placeholder="Nacionalidad" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="tel">
                   </div>
               </div>
 
