@@ -24,6 +24,8 @@ Route::get('/myprofile','ProfileController@MyProfile');
 
 Route::get('/newpackage','PackageController@index');
 
+Route::get('/searchByShopTracking','PackageController@showShopTracking');
+
 Route::get('/add_package','PackageController@store');
 
 Route::get('/add_profile','ProfileController@store');
