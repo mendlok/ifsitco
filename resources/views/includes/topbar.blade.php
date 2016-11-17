@@ -14,15 +14,15 @@
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Profile</a></li>
+                        <li><a href="javascript:;"> Perfil</a></li>
                         <li>
                             <a href="javascript:;">
                                 <span class="badge bg-red pull-right">50%</span>
-                                <span>Settings</span>
+                                <span>Ajustes</span>
                             </a>
                         </li>
-                        <li><a href="javascript:;">Help</a></li>
-                        <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        <li><a href="javascript:;">Ayuda</a></li>
+                        <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</a></li>
                     </ul>
                 </li>
                 
@@ -37,10 +37,10 @@
                                 <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                 <span>
                           <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
+                          <span class="time">Hace 3 días.</span>
                         </span>
                                 <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                          Su paquete ha llegado a Florida.
                         </span>
                             </a>
                         </li>
@@ -49,10 +49,10 @@
                                 <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                 <span>
                           <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
+                          <span class="time">Hace 2 días</span>
                         </span>
                                 <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                          Su paquete ha salido hacia Costa Rica.
                         </span>
                             </a>
                         </li>
@@ -61,10 +61,10 @@
                                 <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                 <span>
                           <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
+                          <span class="time">Hace 1 día</span>
                         </span>
                                 <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                          Su paquete ha llegado a Costa Rica.
                         </span>
                             </a>
                         </li>
@@ -73,17 +73,17 @@
                                 <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                 <span>
                           <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
+                          <span class="time">Hace 5 horas</span>
                         </span>
                                 <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                          Su paquete ha sido entregado.
                         </span>
                             </a>
                         </li>
                         <li>
                             <div class="text-center">
                                 <a>
-                                    <strong>See All Alerts</strong>
+                                    <strong>Ver todas las alertas</strong>
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </div>

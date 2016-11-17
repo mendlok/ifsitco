@@ -32,6 +32,8 @@
 
                 @yield('main_container')
 
+                
+
             </div>
         </div>
 
