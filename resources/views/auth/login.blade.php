@@ -66,7 +66,7 @@
                         
                         <div>
                             <h1><i class="fa fa-paw"></i>IFS</h1>
-                            <p>©2016 Todos los derechos reservados. Itco Costa Rica.</p>
+                            <p>©2016 Todos los derechos reservados. ITCO Costa Rica.</p>
                         </div>
                     </div>
                 </form>
