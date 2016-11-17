@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Profile;
 use App\User;
+use Auth;
 class ProfileController extends Controller
 {
     /**
@@ -19,7 +20,8 @@ class ProfileController extends Controller
 
     public function MyProfile()
     {
-      return view('profile\profile');
+      $profile = Profile::where('id',Auth::user()->id)->get();
+      return view('profile\profile',compact('profile'));
     }
 
     /**

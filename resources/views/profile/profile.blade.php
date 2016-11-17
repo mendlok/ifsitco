@@ -114,25 +114,29 @@
                         <!-- end of image cropping -->
 
                       </div>
-                      <h3>Johnny Rojas</h3>
+                      @foreach ($profile as $profiles)
+                      <h3>
+                        {{$profiles->name}}
+                        {{$profiles->last_name}}
+                        </h3>
 
                       <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"> Aserri, San Jose,Costa Rica</i>
+                        <li><i class="fa fa-map-marker user-profile-icon"> {{$profiles->district}}, {{$profiles->provinces}},Costa Rica</i>
                         </li>
 
                         <li>
-                          <i class="fa fa-briefcase user-profile-icon">Aserri centro</i>
+                          <i class="fa fa-briefcase user-profile-icon">{{$profiles->address}}</i>
                         </li>
 
                         <li class="m-top-xs">
-                          <i class="fa fa-external-link user-profile-icon"></i>
+                          <i class="fa fa-external-link user-profile-icon">{{$profiles->cellphone}}</i>
                           <a href="#" target="_blank"></a>
                         </li>
                       </ul>
 
                       <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
                       <br>
-
+                      @endforeach
 
 
                     </div>
@@ -325,13 +329,15 @@
                       </thead>
                       <tbody >
                         <tr>
-                         <th style="text-align: center;">Johnny</th>
-                          <th style="text-align: center;">Rojas</th>
-                          <td style="text-align: center;">05/02/95</td>
-                          <td style="text-align: center;">Masculino</td>
-                          <td style="text-align: center;">22302230</td>
-                          <td style="text-align: center;">88884511</td>
-                          <td style="text-align: center;">Costa Rica</td>
+                         @foreach($profile as $profiles)
+                          <th style="text-align: center;">{{$profiles->name}}</th>
+                          <th style="text-align: center;">{{$profiles->last_name}}</th>
+                          <td style="text-align: center;">{{$profiles->birth_date}}</td>
+                          <td style="text-align: center;">{{$profiles->sex}}</td>
+                          <td style="text-align: center;">{{$profiles->phone}}</td>
+                          <td style="text-align: center;">{{$profiles->cellphone}}</td>
+                          <td style="text-align: center;">{{$profiles->nacionality}}</td>
+                         @endforeach
                         </tr>
 
                       </tbody>
