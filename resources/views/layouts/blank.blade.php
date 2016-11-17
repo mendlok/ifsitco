@@ -12,11 +12,14 @@
         <title>Gentellela Alela! | </title>
 
         <!-- Bootstrap -->
-        <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
-        <!-- Custom Theme Style -->
-        <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+      
+    <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{ asset("css/nprogress.css") }}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
 
         @stack('stylesheets')
 
@@ -38,13 +41,31 @@
         </div>
 
         <!-- jQuery -->
-        <script src="{{ asset("js/jquery.min.js") }}"></script>
-        <!-- Bootstrap -->
-        <script src="{{ asset("js/bootstrap.min.js") }}"></script>
-        <!-- Custom Theme Scripts -->
-        <script src="{{ asset("js/gentelella.min.js") }}"></script>
+        <script src="https://colorlib.com/polygon/vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
+<script src="https://colorlib.com/polygon/vendors/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+<script src="https://colorlib.com/polygon/vendors/fastclick/lib/fastclick.js" charset="utf-8"></script>
+<script src="https://colorlib.com/polygon/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js" charset="utf-8"></script>
+<script src="https://colorlib.com/polygon/build/js/custom.min.js" charset="utf-8"></script>
+<script src="https://colorlib.com/polygon/vendors/nprogress/nprogress.js" charset="utf-8"></script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#wizard').smartWizard();
+      $('#wizard_verticle').smartWizard({
+        transitionEffect: 'slide'
+      });
+      $('.buttonNext').addClass('btn btn-success');
+      $('.buttonPrevious').addClass('btn btn-primary');
+      $('.buttonFinish').addClass('btn btn-default');
+
+    });
+</script>
         @stack('scripts')
-
+  <footer>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
     </body>
 </html>
