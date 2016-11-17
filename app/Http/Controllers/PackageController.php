@@ -34,6 +34,15 @@ class PackageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+     public function mypackages()
+     {
+       $packages = Package::where('id',Auth::user()->profile_id)->get();
+       return view('package\my_packages',compact('packages'));
+
+     }
+
+
+
     public function store(Request $request)
     {
         $courrier = $request['carrier'];

@@ -15,11 +15,11 @@
     <div class="right_col" role="main">
         <h1>Mis paquetes</h1>
         <div class="container menu" style="background-color: white;">
-            <div class="rows" style="margin:2%;">         
+            <div class="rows" style="margin:2%;">
                 <div class="col-lg-12 col-sm-6 col-xs-12" >
                  <div class="col-lg-4 col-sm-6 col-xs-12 " >
-                <img src="image/foto4.png" class="img-responsive fotos">
-                <br>    
+                <img src="{{ asset('images/box.png') }}" class="img-responsive fotos">
+                <br>
                     <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
                 </div>
                  <div class="col-md-8 col-sm-6 col-xs-12">
@@ -54,7 +54,7 @@
                           <td style="text-align: center;">Entregado</td>
                           <td style="text-align: center;">122</td>
                         </tr>
-                       
+
                       </tbody>
                     </table>
 
