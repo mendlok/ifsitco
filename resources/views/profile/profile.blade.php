@@ -21,7 +21,7 @@
               </div>
 
             </div>
-            
+
             <div class="clearfix"></div>
 
             <div class="row">
@@ -44,7 +44,7 @@
                         <!-- end of image cropping -->
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="image/user.png" alt="Avatar" title="Change the avatar">
+                          <img class="img-responsive avatar-view" src="{{asset ('images/man.png') }}" alt="Avatar" title="Change the avatar" style="height: 208px;">
 
                           <!-- Cropping modal -->
                           <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
@@ -133,7 +133,7 @@
                       <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
                       <br>
 
-               
+
 
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-12">
@@ -246,10 +246,10 @@
 
                             <!-- start user projects -->
             <div class="container menu" style="background-color: white;">
-            <div class="rows" style="margin:2%;">         
+            <div class="rows" style="margin:2%;">
                  <div class="col-lg-2 col-sm-6 col-xs-12 " >
                 <img src="image/foto4.png" class="img-responsive fotos">
-                <br>    
+                <br>
                     <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
                 </div>
                  <div class="col-md-10 col-sm-6 col-xs-12">
@@ -284,7 +284,7 @@
                           <td style="text-align: center;">Entregado</td>
                           <td style="text-align: center;">122</td>
                         </tr>
-                       
+
                       </tbody>
                     </table>
 
@@ -298,7 +298,7 @@
                           </div>
                           <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
                              <div class="container menu" style="background-color: white;">
-            <div class="rows" style="margin:2%;">         
+            <div class="rows" style="margin:2%;">
                  <div class="col-md-12 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -333,7 +333,7 @@
                           <td style="text-align: center;">88884511</td>
                           <td style="text-align: center;">Costa Rica</td>
                         </tr>
-                       
+
                       </tbody>
                     </table>
 
@@ -361,7 +361,7 @@
         </div>
         <div class="clearfix"></div>
     </footer>
-    
+
     <script type="text/javascript">
       $(document).ready(function(){
         $(".flip").click(function(){
