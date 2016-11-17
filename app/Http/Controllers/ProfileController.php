@@ -16,6 +16,11 @@ class ProfileController extends Controller
         return view('auth\profile_register');
     }
 
+    public function MyProfile()
+    {
+      return view('profile\profile');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
