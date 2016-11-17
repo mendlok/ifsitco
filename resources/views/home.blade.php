@@ -124,10 +124,10 @@
                             <p class="lead">Busca por guía aérea o # de tracking D
                             domestico USA emitido por la tienda:</p>
                             <p>Ingresa # de guía FEDEX, UPS, DHL, USPS…</p>
-                            <div class="input-group">
+                            <form class="input-group">
                                 <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
                                 <input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
-                            </div>
+                            </form>
                             <div class="btn-group" role="group" aria-label="...">
                               <button type="button" class="btn btn-default ">Buscar</button>
                             </div>
