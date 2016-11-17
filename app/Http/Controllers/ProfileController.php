@@ -40,19 +40,33 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+      $name = $request['name'];
+      $last_name = $request['last_name'];
+      $DNI = $request['dni'];
+      $birth_date = $request['shop'];
+      $phone =  $request['phone'];
+      $cellphone =  $request['cellphone'];
+      $nacionality = "Costa Rica";
+      $provinces =  "San Jose";
+      $canton =  "Desamparados";
+      $district =  "Desamparados";
+      $address = $request['address'];
+      $sex = $request['sex'];
+      $email = $request['email'];
+      $password = $request['password'];
       $profile = new Profile();
-      $profile->name = $request['name'];
-      $profile->last_name = $request['last_name'];
+      $profile->name = "Kenneth";
+      $profile->last_name = "Kenneth";
       $profile->client_type = "client";
-      $profile->DNI = $request['dni'];
+      $profile->DNI = "1233456";
       $profile->sex = "m";
-      $profile->phone = $request['phone'];
-      $profile->cellphone = $request['cellphone'];
-      $profile->nacionality = "Costa Rica";
-      $profile->provinces = $request['province'];
-      $profile->district = $request['district'];
-      $profile->address = $request['address'];
+      $profile->phone = "1452552";
+      $profile->nacionality = $nacionality;
+      $profile->provinces = $provinces;
+      $profile->district = $district;
+      $profile->address = "412364454";
       $profile->express = "yes";
+      $profile->save();
       return $profile->save();
 
     }

@@ -17,6 +17,7 @@ class CreateProfilesTable extends Migration
             $table->enum('client_type', ['client', 'admin'])->default('client');
             $table->string('name');
             $table->string('last_name');
+            $table->string('DNI',15);
             $table->date('birth_date');
             $table->enum('sex', ['m', 'f']);
             $table->string('phone');

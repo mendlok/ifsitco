@@ -56,7 +56,7 @@
 
 
 
-<form>
+<form action="{{ url('/add_profile') }}" method="post">
     <div class="stepContainer form-horizontal form-label-left"><div id="step-1" class="content" style="display: none;">
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email<span class="required">*</span>
@@ -331,6 +331,7 @@
             </div>
           </div>
       </div>
+      <input type="submit" name="name" value="Registro">
   </form>
 <script src="https://colorlib.com/polygon/vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
 <script src="https://colorlib.com/polygon/vendors/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
