@@ -27,13 +27,13 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Carrier</label>
 
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <select class="form-control">
+                            <select name="carrier" class="form-control">
                                 <option value="">Selecciona tu Carrier</option>
-                                <option >FEDEX</option>
-                                <option >UPS</option>
-                                <option >DHL</option>
-                                <option >USPS</option>
-                                <option value="">OTHERS</option>
+                                <option value="FEDEX">FEDEX</option>
+                                <option value="UPS">UPS</option>
+                                <option value="DHL">DHL</option>
+                                <option value="USPS">USPS</option>
+                                <option value="OTHERS">OTHERS</option>
                             </select>
                         </div>
                     </div>
@@ -41,25 +41,25 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">
                              Numero de Tracking  </label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input class="form-control"  placeholder="Numero de Tracking"  name="txt_numbre_tracking" type="text">
+                            <input class="form-control"  placeholder="Numero de Tracking"  name="tracking" type="text">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Lugar de la compra</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input class="form-control" name="txt_place" placeholder="Lugar de la compra" type="text">
+                            <input class="form-control" name="shop" placeholder="Lugar de la compra" type="text">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">valor de tu compra</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input class="form-control" name="txt_value" placeholder="Valor de tu compra" type="text">
+                            <input class="form-control" name="value" placeholder="Valor de tu compra" type="text">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Numero de referencia</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Descripción</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <input class="form-control" name="txt_numberReferen" placeholder="Numero de referencia" type="text">
+                            <textarea class="form-control" name="description" placeholder="Descripción" type="text"></textarea>
                         </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
