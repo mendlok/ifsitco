@@ -30,4 +30,6 @@ Route::get('/add_package','PackageController@store');
 
 Route::get('/add_profile','ProfileController@store');
 
+Route::get('/mypackages/more-info/{tracking}', ['uses' =>'PackageController@infoPackage']);
+
 Route::get('/example',function(){return view('example');});

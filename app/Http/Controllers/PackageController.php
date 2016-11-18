@@ -105,6 +105,13 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     public function infoPackage($tracking)
+     {
+       $data['tracking'] = $tracking;
+       return view('package\pack_details', $data);
+     }
+
+
     public function destroy($id)
     {
         //

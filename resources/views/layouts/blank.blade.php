@@ -12,7 +12,7 @@
         <title>Gentellela Alela! | </title>
 
         <!-- Bootstrap -->
-      
+
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
@@ -22,6 +22,8 @@
     <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
 
     <link href="{{ asset("css/styleifs.css") }}" rel="stylesheet">
+
+    <link href="{{ asset("css/AdminLTE.css") }}" rel="stylesheet">
 
         @stack('stylesheets')
 
@@ -37,7 +39,7 @@
 
                 @yield('main_container')
 
-                
+
 
             </div>
         </div>

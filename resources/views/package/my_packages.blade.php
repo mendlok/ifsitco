@@ -32,7 +32,8 @@
                  <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                 <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
                 <br>
-                    <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
+
+                    <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href="{{ url('/mypackages/more-info/'.$package->tracking) }}" style="color:white;">Ver producto</a></span>
                 </div>
                  <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">
@@ -63,7 +64,13 @@
                           <td class="col-md-2">{{$package->tracking}}</td>
                           <td class="col-md-2">{{$package->product_description}}</td>
                           <td class="col-md-2"><img src="{{ asset('images/dollar.png') }}"style="height: 15px;">{{$package->value}}.00</td>
-                          <td class="col-md-2">{{$package->courrier}}</td>
+                          @if($package->status === "pending")
+                            <td class="col-md-2"><span class="label label-danger">Alertado</span></td>
+                          @elseif($package->status === "transit")
+                            <td class="col-md-2"><span class="label label-warning">En transito</span></td>
+                          @else
+                            <td class="col-md-2"><span class="label label-success">Entregado</span></td>
+                          @endif
                           <td class="col-md-2">{{$package->courrier}}</td>
                         </tr>
                       </tbody>
