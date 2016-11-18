@@ -98,18 +98,18 @@
                         <div class="col-xs-8">
                       <!-- Tab panes -->
                       <div class="tab-content">
-                        <div class="tab-pane active" id="searchta" >
+                        <form class=" input-group tab-pane active" id="searchta" action="" method="post" >
                           <p class="lead">Busca por lista de desconocidas</p>
                           <p> Identifica tus paquetes en nuestra lista de desconocidos: Ingresa el # de tracking Fedex, DHL, UPS…</p>
-                          <form class="input-group">
+                          <div class="input-group">
                               <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
                                <input type="text" id="tracking" class="form-control" placeholder="#" aria-describedby="basic-addon1">
-                          <div class="btn-group" role="group" aria-label="...">
+                              <div class="btn-group" role="group" aria-label="...">
                             <button type="submit" class="btn btn-default ">Buscar</button>
                           </div>
-                          </form>
-                        </div>
-                        <div class="tab-pane" id="searchinter">
+                          </div>
+                        </form>
+                        <form class="input-group tab-pane" id="searchinter" action="" method="post">
                                <p class="lead">Busca por guía aérea o # de tracking internacional: </p>
                           <p>Ingresa el # de guia aérea emitida por transExpress</p>
                           <div class="input-group">
@@ -119,20 +119,20 @@
                           <div class="btn-group" role="group" aria-label="...">
                             <button type="button" class="btn btn-default ">Buscar</button>
                           </div>
-                        </div>
-                        <div class="tab-pane" id="searchstore">
-                          <form class="input-group" action="{{ url('/searchByShopTracking') }}" method="post">
+                        </form>
+                      
+                          <form class="input-group tab-pane" action="{{ url('/searchByShopTracking') }}" method="post" id="searchstore">
                             <p class="lead">Busca por guía aérea o # de tracking D
                             domestico USA emitido por la tienda:</p>
                             <p>Ingresa # de guía FEDEX, UPS, DHL, USPS…</p>
-                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
                                 <input type="text" class="form-control" placeholder="#" name="trackinga" aria-describedby="basic-addon1">
 
                               <div class="btn-group" role="group" aria-label="...">
                                 <button type="submit" class="btn btn-default ">Buscar</button>
                               </div>
                             </form>
-                        </div>
+                     
 
                       </div>
                     </div>
