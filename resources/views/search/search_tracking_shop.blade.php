@@ -13,11 +13,13 @@
 
     <!-- page content -->
     <div class="right_col" role="main">
-       @if($total = 0)
-        <h2>No se a encontrado resultados</h2>
-       @else
-        <h2>Se encontraron {{$total}}</h2>
-       @endif
+      @if ($total === 0)
+       <h2>No se a encontrado resultados</h2>
+      @elseif($total > 0)
+        <h2>Se a encontrado {{$total}} resultado</h2>
+      @else
+        <h2>Se encontraron {{$total}} resultados</h2>
+      @endif
        @foreach($package as $packages)
        <div class="container menu" style="background-color: white;border-top: solid;">
            <div class="rows" style="margin:2%;">

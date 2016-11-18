@@ -20,6 +20,7 @@ class CreatePackagesTable extends Migration
             $table->string('shop');
             $table->string('product_description');
             $table->float('value');
+            $table->enum('status', ['pending', 'transit','delivered'])->default('pending');
             $table->integer('status_id')->unsigned()->nullable();
             $table->integer('guide_id')->unsigned()->nullable();
             $table->integer('profile_id')->unsigned()->nullable();
