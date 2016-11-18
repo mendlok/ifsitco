@@ -108,7 +108,7 @@ class PackageController extends Controller
      public function infoPackage($tracking)
      {
        $data['tracking'] = $tracking;
-       return view('package\pack_details', $data);
+       return view('bills\see_bills', $data);
      }
 
 

@@ -22,7 +22,7 @@
             </div>
             <div class="x_content">
 
-                <form class="form-horizontal form-label-left input_mask" action="{{url('/add_package')}}">
+                <form class="form-horizontal form-label-left input_mask" action="{{url('/add_package')}}" files="true" enctype="application/x-www-form-urlencoded" >
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Carrier</label>
 
@@ -70,7 +70,7 @@
                             </div>
                             <div class="x_content">
                                 <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
-                                
+
                             </div>
                         </div>
                     </div>

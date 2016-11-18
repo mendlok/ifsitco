@@ -24,6 +24,16 @@ Route::get('/myprofile','ProfileController@MyProfile');
 
 Route::get('/newpackage','PackageController@index');
 
+Route::get('/mypackages/myalerts','PackageController@myAlerts');
+
+Route::get('/mypackages/holdInMiami','PackageController@holdInMiami');
+
+Route::get('/mypackages/inTransit','PackageController@inTransit');
+
+Route::get('/mypackages/delivered','PackageController@delivered');
+
+Route::get('/mypackages/holdByInvoice','PackageController@holdByInvoice');
+
 Route::get('/searchByShop','PackageController@showShopTracking');
 
 Route::get('/add_package','PackageController@store');
