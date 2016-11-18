@@ -27,6 +27,6 @@ class HomeController extends Controller
     public function index()
     {
         $coutPackages = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-        return view('home',compact('$coutPackages'));
+        return view('home',compact('coutPackages'));
     }
 }

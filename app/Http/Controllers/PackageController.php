@@ -70,7 +70,8 @@ class PackageController extends Controller
      */
     public function showShopTracking(Request $request)
     {
-      
+
+      return view('search\search_tracking_shop');
     }
 
     /**

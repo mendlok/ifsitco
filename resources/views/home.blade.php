@@ -16,8 +16,9 @@
     <div class="right_col" role="main">
         <div class="row tile_count">
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <a href="{{ url('/searchByShop')}}">MIerda</a>
               <span class="count_top"><i class="fa fa-user"></i>Mis paquetes</span>
-              <div class="count">105</div>
+              <div class="count">{{ $coutPackages }}</div>
               <span class="count_bottom"><i class="green">4% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
@@ -120,19 +121,19 @@
                             <button type="button" class="btn btn-default ">Buscar</button>
                           </div>
                         </form>
-                      
-                          <form class="input-group tab-pane" action="{{ url('/searchByShopTracking') }}" method="post" id="searchstore">
-                            <p class="lead">Busca por guía aérea o # de tracking D
-                            domestico USA emitido por la tienda:</p>
-                            <p>Ingresa # de guía FEDEX, UPS, DHL, USPS…</p>
-                                <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
-                                <input type="text" class="form-control" placeholder="#" name="trackinga" aria-describedby="basic-addon1">
 
-                              <div class="btn-group" role="group" aria-label="...">
-                                <button type="submit" class="btn btn-default ">Buscar</button>
-                              </div>
-                            </form>
-                     
+                          <form class="input-group tab-pane" action="{{ url('/searchByShop') }}" method="post" id="searchstore">
+                              <p class="lead">Busca por guía aérea o # de tracking D
+                              domestico USA emitido por la tienda:</p>
+                              <p>Ingresa # de guía FEDEX, UPS, DHL, USPS…</p>
+                                  <span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                  <input type="text" class="form-control" placeholder="#" name="trackinga" aria-describedby="basic-addon1">
+
+                                <div class="btn-group" role="group" aria-label="...">
+                                  <button type="submit" class="btn btn-default ">Buscar</button>
+                                </div>
+                          </form>
+
 
                       </div>
                     </div>
