@@ -90,7 +90,7 @@
                         </li>
                     </ul>
                 </li>
-                <form action="{{ url('/searchByShop') }}">
+                <form action="{{ url('/searchByShop') }}" style="margin-top: 2%;">
                  <li role="presentation" >
                         <div class="input-group">
                                <button type="submit" class="btn btn-default ">#Buscar</button>
