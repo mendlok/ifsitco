@@ -4,7 +4,9 @@
 .centered-head tr > th{
         text-align: center;
     }
-     .span:hover{
-
- 	background-color: gold;
+.search-position{
+	margin-top: 2% ;
  }
+.nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus{
+color: black !important;
+}
