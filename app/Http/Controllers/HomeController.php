@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Auth;
+use App\Package;
 
 class HomeController extends Controller
 {
@@ -24,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $coutPackages = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+        return view('home',compact('$coutPackages'));
     }
 }
