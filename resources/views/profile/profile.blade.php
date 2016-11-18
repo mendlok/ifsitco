@@ -256,12 +256,8 @@
                             <!-- start user projects -->
             <div class="container menu" style="background-color: white;">
             <div class="rows" style="margin:2%;">
-                 <div class="col-lg-2 col-sm-6 col-xs-12 " >
-                <img src="{{ asset('images/foto4.png') }}" class="img-responsive fotos">
-                <br>
-                    <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
-                </div>
-                 <div class="col-md-10 col-sm-6 col-xs-12">
+                 
+                 <div class="col-md-12 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Mis paquetes</h2>
@@ -276,12 +272,12 @@
                       <div class="rows" style="margin:2%;">
                           <div class="col-lg-12 col-sm-6 col-xs-12" >
                            <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
-                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
+                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 50px;">
                           <br>
 
                               <span class="label label-primary span-ho" style="font-size: 1em;margin-left: 7%;"><a href="{{ url('/mypackages/more-info/'.$package->tracking) }}" style="color:white;">Ver producto</a></span>
                           </div>
-                           <div class="col-md-10 col-sm-6 col-xs-12">
+                           <div class="col-md-12 col-sm-6 col-xs-12">
                           <div class="x_panel">
                             <div class="x_title">
                               <h2>Paquetes Entregados</h2>
