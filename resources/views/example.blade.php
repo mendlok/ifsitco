@@ -30,16 +30,11 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
+                      
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
                     <section class="content invoice">
                       <!-- title row -->
                       <div class="row">
@@ -162,10 +157,88 @@
                             <td><span data-bind="text: discount" class="ng-binding">  4.00 IN /4.00*2.54 CMS</span></td>
 
                         </tr>
+                        <tr>
+                            <td><b>Estado</b></td>
+                            <td><span data-bind="text: discount" class="ng-binding">Alertado</span></td>
+
+                        </tr>
                         </tbody>
                     </table>
                   </div>
-                  
+                      <div class="col-md-12 col-sm-6 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Estatus</h2>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Estatus</th>
+                        <th>Comentarios</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1998/1/1</td>
+                        <td>Cerrado</td>
+                        <td>Entregado</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+                  <div class="col-md-12">
+                  <div class="col-xs-6">    
+                           <div class="col-xs-12">
+                          <p class="lead">Metodos de pago:</p>
+                          <img src="images/visa.png" alt="Visa">
+                          <img src="images/mastercard.png" alt="Mastercard">
+                          <img src="images/american-express.png" alt="American Express">
+                          <img src="images/paypal.png" alt="Paypal">
+                          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                            Esta factura puede ser impresa en caso de susitar algun tipo de inconveniente.
+                          </p>
+                        </div>
+                        </div>  
+                      <div class="col-xs-6">    
+                          <div class="table-responsive">
+                            <table class="table">
+                              <tbody>
+                                <tr>
+                                  <th style="width:50%">Seguro:</th>
+                                  <td>INS</td>
+                                </tr>
+                                <tr>
+                                  <th>Impuesto</th>
+                                  <td>9%</td>
+                                </tr>
+                                <tr>
+                                  <th>Flete:</th>
+                                  <td>$15.80</td>
+                                </tr>
+                                <tr>
+                                  <th>Descuento</th>
+                                  <td>$0</td>
+                                </tr>
+                                <tr>
+                                  <th>Total:</th>
+                                  <td>$80</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>    
+                  </div> 
+                       
+                        
+                      </div>
                       <!-- /.row -->
 
                       <!-- this row will not appear when printing -->
