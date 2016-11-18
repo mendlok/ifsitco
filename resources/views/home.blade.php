@@ -56,8 +56,6 @@
                       <ul class="nav nav-tabs tabs-left">
                         <li class="active"><a href="#mipack" data-toggle="tab" aria-expanded="true">Mis paquetes</a>
                         </li>
-                        <li><a href="#research" data-toggle="tab" aria-expanded="false"><i class="fa fa-search"></i>Buscar</a>
-                        </li>
                       </ul>
                     </div>
 
