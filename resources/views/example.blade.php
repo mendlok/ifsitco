@@ -17,18 +17,6 @@
         <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Perfiles de usuarios</h3>
-              </div>
-
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Ir!</button>
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -37,52 +25,158 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Facturas</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
                   <div class="x_content">
-                    <div class="row">
-                      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                        <ul class="pagination pagination-split">
-                          <li><a href="#">A</a></li>
-                          <li><a href="#">B</a></li>
-                          <li><a href="#">C</a></li>
-                          <li><a href="#">D</a></li>
-                          <li><a href="#">E</a></li>
-                          <li>...</li>
-                          <li><a href="#">W</a></li>
-                          <li><a href="#">X</a></li>
-                          <li><a href="#">Y</a></li>
-                          <li><a href="#">Z</a></li>
-                        </ul>
+
+                    <section class="content invoice">
+                      <!-- title row -->
+                      <div class="row">
+                        <div class="col-xs-12 invoice-header">
+                          <h1>
+                              <i class="fa fa-globe"></i> IFS Factura
+                              <small class="pull-right">Fecha: 18/11/2016</small>
+                          </h1>
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- info row -->
+                      <div class="row invoice-info">
+                        <div class="col-sm-4 invoice-col">
+                          De:
+                          <address>
+                              <strong>Iron Admin, Inc.</strong>
+                              <br>795 Freedom Ave, Suite 600
+                              <br>New York, CA 94107
+                              <br>Teléfono: 1 (804) 123-9876
+                              <br>Email: ironadmin.com
+                          </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                          Para:
+                          <address>
+                                    <strong>Johnny Rojas</strong>
+                                    <br>San Jose , Costa Rica
+                                    <br>Desamparados, Aserri
+                                    <br>Teléfono: 22302230
+                                    <br>Email: johnnywow98@gmail.com
+                          </address>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                          <b>Factura #007612</b>
+                          <br>
+                          <br>
+                          <b>Tracking:</b> 4F3S8J
+                          <br>
+                          <b>Fecha de pago:</b> 18/11/2016
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- Table row -->
+                      <div class="row col-md-6">
+                        <div class="col-xs-12 table">
+                             <table class="table table-hover">
+                        <tbody  >
+                        <tr>
+                            <td><b>Fecha de recibido</b></td>
+                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding"></span>1998/9/5</td>
+
+                        </tr>
+                        <tr>
+                            <td style="width: 25%"><b>Guia</b></td>
+                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">DES1199364550</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Rastreo</b></td>
+                            <td><span data-bind="text: tax" class="ng-binding">LS033606711CN</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Casillero</b></td>
+                            <td><span data-bind="text: others" class="ng-binding">CR129X19528O</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Piezas</b></td>
+                            <td><span data-bind="text: discount" class="ng-binding">500</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Descripcion del paquete</b></td>
+                            <td><span data-bind="text: total" class="ng-binding">Juego de consola</span></td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+
+                        </div>
+
+                        <!-- /.col -->
                       </div>
 
-                      <div class="clearfix"></div>
+                      <!-- /.row -->
 
-                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i>Perfil</i></h4>
-                            <div class="left col-xs-7">
-                              <ul class="list-unstyled">
-                                <li>Nombre:<i></i>  Mario Rodrigez</li>
-                                <li>Cedula:<i></i> 117080225</li>
-                                <li>Sexo:<i></i> Masculino</li>
-                                <li>Telefono:<i></i> 22302230</li>
-                                <li>Celular:<i></i> 88457711</li>
-                              </ul>
-                            </div>
-                            <div class="right col-xs-5 text-center">
-                              <img src="images/man.png" alt="" class="img-circle img-responsive">
-                            </div>
-                          </div>
-                          <div class="col-xs-12 bottom text-center">
-                            <div class="col-xs-12 col-sm-6 emphasis">
-                              <button type="button" class="btn btn-primary btn-xs">
-                                <i class="fa fa-user"> </i> Ver perfil
-                              </button>
-                            </div>
-                          </div>
+                      <div class="row">
+                        <!-- accepted payments column -->
+                        <div class="col-md-6">
+                             <table class="table table-hover">
+                        <tbody>
+                        <tr>
+                            <td><b>Valor declarado</b></td>
+                            <td style="width: 25%">$<span data-bind="text: freight" class="ng-binding"></span>15.000</td>
+
+                        </tr>
+                        <tr>
+                            <td style="width: 25%"><b>Peso</b></td>
+                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">  0.20LBS /0.09KGS</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Altura</b></td>
+                            <td><span data-bind="text: tax" class="ng-binding">   4.00 IN /4.00*2.54 CMS</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Largo </b></td>
+                            <td><span data-bind="text: others" class="ng-binding">6.00 IN /6.00*2.54 CMS</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Ancho </b></td>
+                            <td><span data-bind="text: discount" class="ng-binding">  4.00 IN /4.00*2.54 CMS</span></td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                  
+                      <!-- /.row -->
+
+                      <!-- this row will not appear when printing -->
+                      <div class="row no-print">
+                        <div class="col-xs-12">
+                          <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i>     Imprimir Factura</button>
+                          <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Hacer pago</button>
+                          <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generar PDF</button>
                         </div>
                       </div>
-                    </div>
+                    </section>
                   </div>
                 </div>
               </div>
