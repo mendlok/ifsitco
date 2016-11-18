@@ -198,10 +198,10 @@
                   <div class="col-xs-6">    
                            <div class="col-xs-12">
                           <p class="lead">Metodos de pago:</p>
-                          <img src="images/visa.png" alt="Visa">
-                          <img src="images/mastercard.png" alt="Mastercard">
-                          <img src="images/american-express.png" alt="American Express">
-                          <img src="images/paypal.png" alt="Paypal">
+                          <img src="{{ asset('images/visa.png') }}" alt="Visa">
+                          <img src="{{ asset('images/mastercard.png') }}" alt="Mastercard">
+                          <img src="{{ asset('images/american-express.png') }}" alt="American Express">
+                          <img src="{{ asset('images/paypal.png') }}" alt="Paypal">
                           <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
                             Esta factura puede ser impresa en caso de susitar algun tipo de inconveniente.
                           </p>
