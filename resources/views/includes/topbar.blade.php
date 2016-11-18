@@ -90,20 +90,20 @@
                         </li>
                     </ul>
                 </li>
-                <form action="">
+                <form action="{{ url('/searchByShop') }}">
                  <li role="presentation" >
                         <div class="input-group">
                                <button type="submit" class="btn btn-default ">#Buscar</button>
-                          </div> 
+                          </div>
                 </li>
                 <li role="presentation" >
                         <div class="input-group">
-                              
-                               <input type="text" class="form-control" placeholder="#Buscar" aria-describedby="basic-addon1">  
+
+                               <input type="text" class="form-control" placeholder="#Buscar" aria-describedby="basic-addon1" name="track">
                         </div>
                 </li>
                 </form>
-                 
+
             </ul>
         </nav>
     </div>

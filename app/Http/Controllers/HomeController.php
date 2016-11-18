@@ -6,7 +6,8 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Auth;
 use App\Package;
-use PackageController;
+use App\Http\Traits;
+use App;
 
 class HomeController extends Controller
 {
@@ -26,12 +27,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
       $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
       $count[1] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
       $count[2] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
       $count[3] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+
       return view('home',compact('count'));
     }
 }

@@ -70,8 +70,10 @@ class PackageController extends Controller
      */
     public function showShopTracking(Request $request)
     {
-
-      return view('search\search_tracking_shop');
+      $track = $request['track'];
+      $total = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get()->count();
+      $package = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get();
+      return view('search\search_tracking_shop',compact('package','total'));
     }
 
     /**
@@ -108,12 +110,5 @@ class PackageController extends Controller
         //
     }
 
-    public function CountMypackages()
-    {
-      $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-      $count[1] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-      $count[2] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-      $count[3] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-      return $count;
-    }
+
 }
