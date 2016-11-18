@@ -68,16 +68,16 @@
                           <li class=""><a href="{{url('/mypackages')}}">Mis paquetes</a>
                         </li>
 
-                        <li class=""><a href="#alertmiami" data-toggle="tab" aria-expanded="false">  Alertados y pendientes de recibo en Miami</a>
+                        <li class=""><a href="{{url('/mypackages/myalerts')}}" data-toggle="tab" aria-expanded="false">  Alertados y pendientes de recibo en Miami</a>
                         </li>
 
-                        <li class=""><a href="#" data-toggle="tab">Retenidos en Miami</a>
+                        <li class=""><a href="{{url('/mypackages/holdInMiami')}}" data-toggle="tab">Retenidos en Miami</a>
                         </li>
-                           <li class=""><a href="#" data-toggle="tab" >En tránsito:Miami - Destino Final</a>
+                           <li class=""><a href="{{url('/mypackages/inTransit')}}" data-toggle="tab" >En tránsito:Miami - Destino Final</a>
                         </li>
-                           <li class=""><a href="#" data-toggle="tab" >Entregados</a>
+                           <li class=""><a href="{{url('/mypackages/delivered')}}" data-toggle="tab" >Entregados</a>
                         </li>
-                           <li class=""><a href="#" data-toggle="tab" > Retenidos por falta de Factura Comercial</a>
+                           <li class=""><a href="{{url('/mypackages/holdByInvoice')}}" data-toggle="tab" > Retenidos por falta de Factura Comercial</a>
                         </li>
                            <li class=""><a href="{{ url('/newpackage') }} "> Alértanos tus compras</a>
                         </li>

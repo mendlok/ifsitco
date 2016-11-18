@@ -27,13 +27,13 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-archive"></i> Mis paquetes<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Mis paquetes</a></li>
-                            <li><a href="#">Alertados y pendientes de recibo en Miami</a></li>
-                            <li><a href="#">Retenidos en Miami</a></li>
-                            <li><a href="#">En transito</a></li>
-                            <li><a href="#">Etregados</a></li>
-                            <li><a href="#">Retenidos</a></li>
-                            <li><a href="#">Alertanos tus compras</a></li>
+                            <li><a href="{{url('/mypackages')}}">Mis paquetes</a></li>
+                            <li><a href="{{url('/mypackages/myalerts')}}">Alertados y pendientes de recibo en Miami</a></li>
+                            <li><a href="{{url('/mypackages/holdInMiami')}}">Retenidos en Miami</a></li>
+                            <li><a href="{{url('/mypackages/inTransit')}}">En transito</a></li>
+                            <li><a href="{{url('/mypackages/delivered')}}">Etregados</a></li>
+                            <li><a href="{{url('/mypackages/holdByInvoice')}}">Retenidos</a></li>
+                            <li><a href="{{url('/newpackage')}}">Alertanos tus compras</a></li>
                         </ul>
                     </li>
                 </ul>

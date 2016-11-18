@@ -3,3 +3,8 @@
       }
 .centered-head tr > th{
         text-align: center;
+    }
+     .span:hover{
+
+ 	background-color: gold;
+ }
