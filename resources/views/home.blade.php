@@ -18,22 +18,22 @@
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <a href="{{ url('/searchByShop')}}">MIerda</a>
               <span class="count_top"><i class="fa fa-user"></i>Mis paquetes</span>
-              <div class="count">{{ $coutPackages }}</div>
+              <div class="count">{{ $count[0] }}</div>
               <span class="count_bottom"><i class="green">4% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-clock-o"></i>Paquetes en Miami</span>
-              <div class="count">5</div>
+              <div class="count">{{ $count[1] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i>Paquetes en transito</span>
-              <div class="count">12</div>
+              <div class="count">{{ $count[2] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i>Paquetes entregados</span>
-              <div class="count">7</div>
+              <div class="count">{{ $count[3] }}</div>
               <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Desde el último mes</span>
             </div>
           </div>

@@ -26,7 +26,7 @@ Route::get('/newpackage','PackageController@index');
 
 Route::get('/searchByShop','PackageController@showShopTracking');
 
-Route::get('/add_package','PackageController@store');
+Route::post('/add_package','PackageController@store');
 
 Route::get('/add_profile','ProfileController@store');
 

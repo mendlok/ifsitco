@@ -6,9 +6,11 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Auth;
 use App\Package;
+use PackageController;
 
 class HomeController extends Controller
 {
+
     /**
      * Create a new controller instance.
      *
@@ -26,7 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $coutPackages = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
-        return view('home',compact('coutPackages'));
+      $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+      $count[1] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+      $count[2] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+      $count[3] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+      return view('home',compact('count'));
     }
 }
