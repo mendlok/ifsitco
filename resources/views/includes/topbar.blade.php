@@ -90,6 +90,20 @@
                         </li>
                     </ul>
                 </li>
+                <form action="">
+                 <li role="presentation" >
+                        <div class="input-group">
+                               <button type="submit" class="btn btn-default ">#Buscar</button>
+                          </div> 
+                </li>
+                <li role="presentation" >
+                        <div class="input-group">
+                              
+                               <input type="text" class="form-control" placeholder="#Buscar" aria-describedby="basic-addon1">  
+                        </div>
+                </li>
+                </form>
+                 
             </ul>
         </nav>
     </div>

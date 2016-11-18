@@ -16,22 +16,22 @@
     <div class="right_col" role="main">
         <div class="row tile_count">
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>Mis paquetes</span>
+              <span class="count_top"><i class="fa fa-user"></i>  Mis paquetes</span>
               <div class="count">105</div>
-              <span class="count_bottom"><i class="green">4% </i>Desde el último mes</span>
+              <span class="count_bottom"><i class="green">4% </i> Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i>Paquetes en Miami</span>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Paquetes en Miami</span>
               <div class="count">5</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>Paquetes en transito</span>
+              <span class="count_top"><i class="fa fa-user"></i>  Paquetes en transito</span>
               <div class="count">12</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Desde el último mes</span>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>Paquetes entregados</span>
+              <span class="count_top"><i class="fa fa-user"></i>  Paquetes entregados</span>
               <div class="count">7</div>
               <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Desde el último mes</span>
             </div>
@@ -86,6 +86,15 @@
                         </li>
                           </ul>
                         </div>
+                        <div class="tab-pane active" id="user">
+                          <p class="lead">Usuarios</p>
+                          <ul class="nav nav-tabs tabs-left">
+                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Crear nuevo administrador</a>
+                        </li>
+                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Ver todos los administradores</a>
+                        </li>
+                          </ul>
+                        </div>
 
                         <div class="tab-pane " id="research">
                           <p class="lead">Buscar</p>
@@ -119,7 +128,7 @@
                                <input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
                           </div>
                           <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-default ">Buscar</button>
+                            <
                           </div>
                         </div>
                         <div class="tab-pane" id="searchstore">
