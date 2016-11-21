@@ -14,15 +14,16 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <h1>Retenidos por falta de factura comercial</h1>
-        <div class="container menu" style="background-color: white;">
-            <div class="rows" style="margin:2%;">         
+        @foreach($packages as $package)
+        <div class="container menu" style="background-color: white;border-top: solid;">
+            <div class="rows" style="margin:2%;">
                 <div class="col-lg-12 col-sm-6 col-xs-12" >
-                 <div class="col-lg-4 col-sm-6 col-xs-12 " >
-                <img src="image/foto4.png" class="img-responsive fotos">
-                <br>    
-                    <span class="label label-primary" style="font-size: 1em;margin-left: 7%;"><a href=" " style="color:white;">Ver producto</a></span>
+                 <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
+                <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
+                <br>
+                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/mypackages/more-info/'.$package->tracking) }}">Ver producto</a>
                 </div>
-                 <div class="col-md-8 col-sm-6 col-xs-12">
+                 <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Paquetes Entregados</h2>
@@ -32,7 +33,7 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                    <div class="x_content">
+                  <div class="x_content">
 
                     <table class="col-md-12" >
                       <thead class="centered-head" >
@@ -51,7 +52,13 @@
                           <td class="col-md-2">{{$package->tracking}}</td>
                           <td class="col-md-2">{{$package->product_description}}</td>
                           <td class="col-md-2"><img src="{{ asset('images/dollar.png') }}"style="height: 15px;">{{$package->value}}.00</td>
-                          <td class="col-md-2">{{$package->courrier}}</td>
+                          @if($package->status === "pending")
+                            <td class="col-md-2"><span class="label label-danger">Alertado</span></td>
+                          @elseif($package->status === "transit")
+                            <td class="col-md-2"><span class="label label-warning">En transito</span></td>
+                          @else
+                            <td class="col-md-2"><span class="label label-success">Entregado</span></td>
+                          @endif
                           <td class="col-md-2">{{$package->courrier}}</td>
                         </tr>
                       </tbody>
@@ -63,6 +70,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
     <!-- /page content -->
 

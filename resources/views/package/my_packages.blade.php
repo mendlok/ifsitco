@@ -32,8 +32,7 @@
                  <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                 <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
                 <br>
-
-                    <span class="label label-primary span-ho" style="font-size: 1em;margin-left: 7%;"><a href="{{ url('/mypackages/more-info/'.$package->tracking) }}" style="color:white;">Ver producto</a></span>
+                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/mypackages/more-info/'.$package->tracking) }}">Ver producto</a>
                 </div>
                  <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">

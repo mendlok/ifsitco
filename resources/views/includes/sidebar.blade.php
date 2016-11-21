@@ -30,8 +30,8 @@
                             <li><a href="{{url('/mypackages')}}">Mis paquetes</a></li>
                             <li><a href="{{url('/mypackages/myalerts')}}">Alertados y pendientes de recibo en Miami</a></li>
                             <li><a href="{{url('/mypackages/holdInMiami')}}">Retenidos en Miami</a></li>
-                            <li><a href="{{url('/mypackages/inTransit')}}">En transito</a></li>
-                            <li><a href="{{url('/mypackages/delivered')}}">Etregados</a></li>
+                            <li><a href="{{url('/mypackages/inTransit')}}">En tránsito</a></li>
+                            <li><a href="{{url('/mypackages/delivered')}}">Entregados</a></li>
                             <li><a href="{{url('/mypackages/holdByInvoice')}}">Retenidos</a></li>
                             <li><a href="{{url('/newpackage')}}">Alertanos tus compras</a></li>
                         </ul>

@@ -139,7 +139,7 @@
                         </li>
                       </ul>
 
-                      <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+                      <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Editar Perfil</a>
                       <br>
                       @endforeach
 
@@ -277,10 +277,10 @@
                       <div class="rows" style="margin:2%;">
                           <div class="col-lg-12 col-sm-6 col-xs-12" >
                            <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
-                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 70px;">
+                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 70px;margin-left: 15%;">
                           <br>
 
-                              <span class="label label-primary span-ho" style="font-size: 1em;margin-left: 7%;"><a href="{{ url('/mypackages/more-info/'.$package->tracking) }}" style="color:white;">Ver producto</a></span>
+                              <a class="btn btn-primary" style="margin-left: 5%;" href="{{ url('/mypackages/more-info/'.$package->tracking) }}">Ver producto</a>
                           </div>
                            <div class="col-md-10 col-sm-6 col-xs-12">
                           <div class="x_panel">
