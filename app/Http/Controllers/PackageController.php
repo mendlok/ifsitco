@@ -107,8 +107,10 @@ class PackageController extends Controller
      */
      public function infoPackage($tracking)
      {
-       $data['tracking'] = $tracking;
-       return view('bills\see_bills', $data);
+          $data['tracking'] = $tracking;
+          $package = Package::where('tracking',$tracking)->where('profile_id',Auth::user()->profile_id)->get();
+          $profile = Profile::where('id',Auth::user()->profile_id) ->join('id', 'profiles', '=', 'users.id')->get();
+          return view('bills\see_bills',compact('package','profile'));
      }
 
 
