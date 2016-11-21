@@ -20,8 +20,9 @@
       @else
         <h2>Se encontraron {{$total}} resultados</h2>
       @endif
-       @foreach($package as $packages)
+      
        <div class="container menu" style="background-color: white;border-top: solid;">
+        @foreach($package as $packages)
            <div class="rows" style="margin:2%;">
                <div class="col-lg-12 col-sm-6 col-xs-12" >
                 <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
