@@ -168,7 +168,12 @@
 </div></div></div>
                       <!-- end of user-activity-graph -->
 
-                      <div class="col-md-12" role="tabpanel" data-example-id="togglable-tabs">
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="col-md-12" role="tabpanel" data-example-id="togglable-tabs">
                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                           <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Alertas</a>
                           </li>
@@ -270,14 +275,14 @@
                   @foreach($packages as $package)
                   <div class="container menu" style="background-color: white;border-top: solid;">
                       <div class="rows" style="margin:2%;">
-                          <div class="col-lg-12 col-sm-6 col-xs-12" >
+                          <div class="col-lg-10 col-sm-6 col-xs-12" >
                            <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
-                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 50px;">
+                          <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 70px;">
                           <br>
 
                               <span class="label label-primary span-ho" style="font-size: 1em;margin-left: 7%;"><a href="{{ url('/mypackages/more-info/'.$package->tracking) }}" style="color:white;">Ver producto</a></span>
                           </div>
-                           <div class="col-md-12 col-sm-6 col-xs-12">
+                           <div class="col-md-10 col-sm-6 col-xs-12">
                           <div class="x_panel">
                             <div class="x_title">
                               <h2>Paquetes Entregados</h2>
@@ -346,41 +351,58 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Nombre</th>
-                          <th>Apelido</th>
-                          <th>Fecha Nacimiento</th>
-                          <th>Sexo</th>
-                          <th>Teléfono</th>
-                          <th>Celular</th>
-                          <th>Nacionalidad</th>
-                        </tr>
-                      </thead>
-                      <tbody >
-                        <tr>
+                   <div class="row col-md-6">
+                        <div class="col-xs-12 table">
+                             <table class="table table-hover">
+                        <tbody >
                          @foreach($profile as $profiles)
-                          <th style="text-align: center;">{{$profiles->name}}</th>
-                          <th style="text-align: center;">{{$profiles->last_name}}</th>
-                          <td style="text-align: center;">{{$profiles->birth_date}}</td>
-                          <td style="text-align: center;">
-                            @if($profiles->sex === "m")
+                        <tr>
+                            <td><b>Nombre</b></td>
+                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding"></span>{{$profiles->name}}</td>
+
+                        </tr>
+                        <tr>
+                            <td style="width: 25%"><b>Apellido</b></td>
+                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">{{$profiles->last_name}}</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Fecha de Nacimiento</b></td>
+                            <td><span data-bind="text: tax" class="ng-binding">{{$profiles->birth_date}}</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Sexo</b></td>
+                            <td><span data-bind="text: others" class="ng-binding"> @if($profiles->sex === "m")
                             Hombre
                             @else
                             Mujer
-                            @endif
-                          </td>
-                          <td style="text-align: center;">{{$profiles->phone}}</td>
-                          <td style="text-align: center;">{{$profiles->cellphone}}</td>
-                          <td style="text-align: center;">{{$profiles->nacionality}}</td>
-                         @endforeach
-                        </tr>
+                            @endif</span></td>
 
-                      </tbody>
+                        </tr>
+                        <tr>
+                            <td><b>Teléfono</b></td>
+                            <td><span data-bind="text: discount" class="ng-binding">{{$profiles->phone}}</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Celular</b></td>
+                            <td><span data-bind="text: total" class="ng-binding">{{$profiles->cellphone}}</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><b>Nacionalidad</b></td>
+                            <td><span data-bind="text: total" class="ng-binding">{{$profiles->nacionality}}</span></td>
+                             
+                        </tr>
+                        @endforeach
+                        </tbody>
                     </table>
 
+                        </div>
+
+                        <!-- /.col -->
+                      </div>
                   </div>
                 </div>
               </div>
@@ -389,13 +411,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
     </div>
+
     <!-- /page content -->
 
     <!-- footer content -->
