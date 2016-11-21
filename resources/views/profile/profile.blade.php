@@ -188,7 +188,7 @@
                             <!-- start recent activity -->
                             <ul class="messages">
                               <li>
-                                <img src="image/user.png" class="avatar" alt="Avatar">
+                                <img src="{{asset ('images/excla.png') }}" class="avatar" alt="Avatar">
                                 <div class="message_date">
                                   <h3 class="date text-info">24</h3>
                                   <p class="month">May</p>
