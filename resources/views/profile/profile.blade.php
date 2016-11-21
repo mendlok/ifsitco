@@ -126,15 +126,15 @@
                         </h3>
 
                       <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"> {{$profiles->district}}, {{$profiles->provinces}},Costa Rica</i>
+                        <li><i class="fa fa-map-marker user-profile-icon .estilo-letra">    {{$profiles->district}}, {{$profiles->provinces}},Costa Rica</i>
                         </li>
 
                         <li>
-                          <i class="fa fa-briefcase user-profile-icon">{{$profiles->address}}</i>
+                          <i class="fa fa-briefcase user-profile-icon estilo-letra">      {{$profiles->address}}</i>
                         </li>
 
                         <li class="m-top-xs">
-                          <i class="fa fa-external-link user-profile-icon">{{$profiles->cellphone}}</i>
+                          <i class="fa fa-external-link user-profile-icon estilo-letra">      {{$profiles->cellphone}}</i>
                           <a href="#" target="_blank"></a>
                         </li>
                       </ul>
@@ -275,7 +275,7 @@
                   @foreach($packages as $package)
                   <div class="container menu" style="background-color: white;border-top: solid;">
                       <div class="rows" style="margin:2%;">
-                          <div class="col-lg-10 col-sm-6 col-xs-12" >
+                          <div class="col-lg-12 col-sm-6 col-xs-12" >
                            <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                           <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 70px;">
                           <br>
