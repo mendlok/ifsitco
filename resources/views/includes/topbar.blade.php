@@ -93,13 +93,13 @@
                 <form action="{{ url('/searchByShop') }}" style="margin-top: 2%;">
                  <li role="presentation" >
                         <div class="input-group">
-                               <button type="submit" class="btn btn-default ">#Buscar</button>
+                               <button type="submit" class="btn btn-default ">Buscar</button>
                           </div>
                 </li>
                 <li role="presentation" >
                         <div class="input-group">
 
-                               <input type="text" class="form-control" placeholder="#Buscar" aria-describedby="basic-addon1" name="track">
+                               <input type="text" class="form-control" placeholder="#Tracking" aria-describedby="basic-addon1" name="track">
                         </div>
                 </li>
                 </form>
