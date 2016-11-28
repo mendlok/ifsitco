@@ -93,13 +93,11 @@
                         <div class="tab-pane " id="user">
                           <p class="lead">Usuarios</p>
                           <ul class="nav nav-tabs tabs-left">
-                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Crear nuevo administrador</a>
+                          <li class=""><a href="{{url('/newadmin')}}" aria-expanded="false">Crear nuevo administrador</a>
                         </li>
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Ver todos los administradores</a>
+                        <li class=""><a href="{{url('/seealladmins')}}"  aria-expanded="false">Ver todos los administradores</a>
                         </li>
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Ver todos los usuarios clientes</a>
-                        </li>
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Eliminar usuarios clientes.</a>
+                        <li class=""><a href="{{url('/seealllcients')}}"  aria-expanded="false">Ver todos los usuarios clientes</a>
                         </li>
                           </ul>
                         </div>

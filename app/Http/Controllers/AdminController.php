@@ -39,8 +39,8 @@ class AdminController extends Controller
 
     public function newadmin()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        return view('Adminviews\new_admin',compact('packages'));
+       
+        return view('Adminviews\new_admin');
     }
 
      public function serachprofileadmin()
@@ -54,6 +54,8 @@ class AdminController extends Controller
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
         return view('Adminviews\search_profile_client',compact('packages'));
     }
+
+
 
      public function adminHome()
     {
