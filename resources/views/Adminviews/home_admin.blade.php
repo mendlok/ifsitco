@@ -63,7 +63,7 @@
                       <!-- required for floating -->
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs tabs-left">
-                        <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-archive"></i>        Paquetes</a>
+                        <li><a href="#mipack" data-toggle="tab" aria-expanded="false"><i class="fa fa-archive"></i>        Paquetes</a>
                         </li>
                         <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-user"></i>        Usuario</a>
                         </li>
