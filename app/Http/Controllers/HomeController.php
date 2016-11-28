@@ -34,12 +34,9 @@ class HomeController extends Controller
     public function index()
     {
       if (true){
-        $count[0] = Profile::all()->count();
-        $count[1] = Package::all()->count();
-        $count[3] = Package::where('profile_id',Auth::user()->profile_id)->where('status','delivered')->get()->count();
-        $count[4] = Package::where('profile_id',Auth::user()->profile_id)->where('status','transit')->get()->count();
-        $count[5] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();
-        return view('/example',compact('count'));
+        return redirect()->action(
+          'AdminController@adminHome'
+        );
       }else {
         $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
         $count[1] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();

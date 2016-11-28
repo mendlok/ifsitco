@@ -50,8 +50,13 @@ class AdminController extends Controller
         return view('Adminviews\search_profile_client',compact('packages'));
     }
 
-     public function adminhome()
+     public function adminHome()
     {
-        return view('Adminviews\home_admin',compact('packages'));
+        $count[0] = Profile::all()->count();
+        $count[1] = Package::all()->count();
+        $count[3] = Package::where('profile_id',Auth::user()->profile_id)->where('status','delivered')->get()->count();
+        $count[4] = Package::where('profile_id',Auth::user()->profile_id)->where('status','transit')->get()->count();
+        $count[5] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();
+        return view('Adminviews\home_admin',compact('count'));
     }
 }

@@ -44,7 +44,11 @@ Route::get('/mypackages/more-info/{tracking}', ['uses' =>'PackageController@info
 
 Route::get('/example',function(){return view('example');});
 
-//Aqui empiezan las rutas del admin//
+
+
+
+Route::get('/home_admin','AdminController@adminHome');
+
 Route::get('/allpackages/alert','AdminController@allAlerts');
 
 Route::get('/allpackages/delivered','AdminController@alldelivered');
