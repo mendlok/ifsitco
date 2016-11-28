@@ -14,247 +14,95 @@
 
     <!-- page content -->
     <div class="right_col" role="main">
-        <div class="">
-            <div class="page-title">
-              <div class="title_left">
-              </div>
+        <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Usuarios Registrados</span>
+              <div class="count">2500</div>
+              <span class="count_bottom"><i class="green">4% </i>Del último mes</span>
             </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i>Total de paquetes</span>
+              <div class="count">1200</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> De ultimo mes</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes sin reclamar</span>
+              <div class="count">7325</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes entregados</span>
+              <div class="count green">2400</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes en tránsito</span>
+              <div class="count">4567</div>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Del ultimo mes</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes Alertados</span>
+              <div class="count">2,315</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
+            </div>
+          </div>
+         <div class="container">
+              <div class="col-md-12 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Facturas</h2>
+                    <h2><i class="fa fa-bars "></i>IFS</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <section class="content invoice">
-                      <!-- title row -->
-                      <div class="row">
-                        <div class="col-xs-12 invoice-header">
-                          <h1>
-                              <i class="fa fa-globe"></i> IFS Factura
-                              <small class="pull-right">Fecha: 18/11/2016</small>
-                          </h1>
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- info row -->
-                      <div class="row invoice-info">
-                        <div class="col-sm-4 invoice-col">
-                          De:
-                          <address>
-                              <strong>Iron Admin, Inc.</strong>
-                              <br>795 Freedom Ave, Suite 600
-                              <br>New York, CA 94107
-                              <br>Teléfono: 1 (804) 123-9876
-                              <br>Email: ironadmin.com
-                          </address>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
-                          Para:
-                          <address>
-                                    <strong>Johnny Rojas</strong>
-                                    <br>San Jose , Costa Rica
-                                    <br>Desamparados, Aserri
-                                    <br>Teléfono: 22302230
-                                    <br>Email: johnnywow98@gmail.com
-                          </address>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
-                          <b>Factura #007612</b>
-                          <br>
-                          <br>
-                          <b>Tracking:</b> 4F3S8J
-                          <br>
-                          <b>Fecha de pago:</b> 18/11/2016
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
 
-                      <!-- Table row -->
-                      <div class="row col-md-6">
-                        <div class="col-xs-12 table">
-                             <table class="table table-hover">
-                        <tbody  >
-                        <tr>
-                            <td><b>Fecha de recibido</b></td>
-                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding"></span>1998/9/5</td>
+                    <div class="col-xs-4">
+                      <!-- required for floating -->
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs tabs-left">
+                        <li class="active"><a href="#mipack" data-toggle="tab" aria-expanded="true">Mis paquetes</a>
+                        </li>
+                        <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-user"></i>        Usuario</a>
+                        </li>
+                      </ul>
+                    </div>
 
-                        </tr>
-                        <tr>
-                            <td style="width: 25%"><b>Guia</b></td>
-                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">DES1199364550</span></td>
+                     <div class="col-xs-8">
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="mipack">
+                          <p class="lead">Mis paquetes</p>
+                          <ul class="nav nav-tabs tabs-left">
+                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes</a>
+                        </li>
 
-                        </tr>
-                        <tr>
-                            <td><b>Rastreo</b></td>
-                            <td><span data-bind="text: tax" class="ng-binding">LS033606711CN</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Casillero</b></td>
-                            <td><span data-bind="text: others" class="ng-binding">CR129X19528O</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Piezas</b></td>
-                            <td><span data-bind="text: discount" class="ng-binding">500</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Descripcion del paquete</b></td>
-                            <td><span data-bind="text: total" class="ng-binding">Juego de consola</span></td>
-
-                        </tr>
-                        </tbody>
-                    </table>
-
+                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes sin reclamar</a>
+                        </li>
+                          </ul>
                         </div>
 
-                        <!-- /.col -->
-                      </div>
-
-                      <!-- /.row -->
-
-                      <div class="row">
-                        <!-- accepted payments column -->
-                        <div class="col-md-6">
-                             <table class="table table-hover">
-                        <tbody>
-                        <tr>
-                            <td><b>Valor declarado</b></td>
-                            <td style="width: 25%">$<span data-bind="text: freight" class="ng-binding"></span>15.000</td>
-
-                        </tr>
-                        <tr>
-                            <td style="width: 25%"><b>Peso</b></td>
-                            <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">  0.20LBS /0.09KGS</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Altura</b></td>
-                            <td><span data-bind="text: tax" class="ng-binding">   4.00 IN /4.00*2.54 CMS</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Largo </b></td>
-                            <td><span data-bind="text: others" class="ng-binding">6.00 IN /6.00*2.54 CMS</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Ancho </b></td>
-                            <td><span data-bind="text: discount" class="ng-binding">  4.00 IN /4.00*2.54 CMS</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><b>Estado</b></td>
-                            <td><span data-bind="text: discount" class="ng-binding">Alertado</span></td>
-
-                        </tr>
-                        </tbody>
-                    </table>
-                  </div>
-                      <div class="col-md-12 col-sm-6 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2>Estatus</h2>
-
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Estatus</th>
-                        <th>Comentarios</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1998/1/1</td>
-                        <td>Cerrado</td>
-                        <td>Entregado</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
-                  <div class="col-md-12">
-                  <div class="col-xs-6">    
-                           <div class="col-xs-12">
-                          <p class="lead">Metodos de pago:</p>
-                          <img src="images/visa.png" alt="Visa">
-                          <img src="images/mastercard.png" alt="Mastercard">
-                          <img src="images/american-express.png" alt="American Express">
-                          <img src="images/paypal.png" alt="Paypal">
-                          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-                            Esta factura puede ser impresa en caso de susitar algun tipo de inconveniente.
-                          </p>
-                        </div>
-                        </div>  
-                      <div class="col-xs-6">    
-                          <div class="table-responsive">
-                            <table class="table">
-                              <tbody>
-                                <tr>
-                                  <th style="width:50%">Seguro:</th>
-                                  <td>INS</td>
-                                </tr>
-                                <tr>
-                                  <th>Impuesto</th>
-                                  <td>9%</td>
-                                </tr>
-                                <tr>
-                                  <th>Flete:</th>
-                                  <td>$15.80</td>
-                                </tr>
-                                <tr>
-                                  <th>Descuento</th>
-                                  <td>$0</td>
-                                </tr>
-                                <tr>
-                                  <th>Total:</th>
-                                  <td>$80</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>    
-                  </div> 
-                       
-                        
-                      </div>
-                      <!-- /.row -->
-
-                      <!-- this row will not appear when printing -->
-                      <div class="row no-print">
-                        <div class="col-xs-12">
-                          <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i>     Imprimir Factura</button>
-                          <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Hacer pago</button>
-                          <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generar PDF</button>
+                        <div class="tab-pane " id="user">
+                          <p class="lead">Usuarios</p>
+                          <ul class="nav nav-tabs tabs-left">
+                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Crear nuevo administrador</a>
+                        </li>
+                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Ver todos los administradores</a>
+                        </li>
+                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Ver todos los usuarios clientes</a>
+                        </li>
+                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Eliminar usuarios clientes.</a>
+                        </li>
+                          </ul>
                         </div>
                       </div>
-                    </section>
-                  </div>
+                    </div>
                 </div>
               </div>
-            </div>
-          </div>
+
+      </div>
     </div>
     <!-- /page content -->
 

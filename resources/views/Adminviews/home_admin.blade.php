@@ -15,25 +15,35 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <div class="row tile_count">
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>  Mis paquetes</span>
-              <div class="count">105</div>
-              <span class="count_bottom"><i class="green">4% </i> Desde el último mes</span>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Usuarios Registrados</span>
+              <div class="count">2500</div>
+              <span class="count_bottom"><i class="green">4% </i>Del último mes</span>
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Paquetes en Miami</span>
-              <div class="count">5</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i>Desde el último mes</span>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i>Total de paquetes</span>
+              <div class="count">1200</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> De ultimo mes</span>
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>  Paquetes en transito</span>
-              <div class="count">12</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Desde el último mes</span>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes sin reclamar</span>
+              <div class="count">7325</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>  Paquetes entregados</span>
-              <div class="count">7</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Desde el último mes</span>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes entregados</span>
+              <div class="count green">2400</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes en tránsito</span>
+              <div class="count">4567</div>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Del ultimo mes</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Paquetes Alertados</span>
+              <div class="count">2,315</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
           </div>
          <div class="container">
