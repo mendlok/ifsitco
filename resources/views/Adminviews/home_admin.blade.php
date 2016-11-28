@@ -17,32 +17,32 @@
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-group"></i>      Usuarios Registrados</span>
-              <div class="count">2500</div>
+              <div class="count">{{ $count[0] }}</div>
               <span class="count_bottom"><i class="green">4% </i>Del último mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-archive"></i>     Total de paquetes</span>
-              <div class="count">1200</div>
+              <div class="count">{{ $count[1] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> De ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-warning"></i>     Paquetes sin reclamar</span>
-              <div class="count">7325</div>
+              <div class="count">{{ $count[3] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-check"></i>     Paquetes entregados</span>
-              <div class="count green">2400</div>
+              <div class="count green">{{ $count[3] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-plane"></i>     Paquetes en tránsito</span>
-              <div class="count">4567</div>
+              <div class="count">{{ $count[4] }}</div>
               <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Del ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-bell"></i>     Paquetes Alertados</span>
-              <div class="count">2315</div>
+              <div class="count">{{ $count[5] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
           </div>
@@ -113,7 +113,7 @@
     <!-- /page content -->
 
     <!-- footer content -->
-   
+
 
     <script type="text/javascript">
       $(document).ready(function(){
