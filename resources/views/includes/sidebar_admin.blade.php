@@ -28,22 +28,20 @@
                     <li><a><i class="fa fa-archive"></i> Mis paquetes<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{url('/mypackages')}}">Mis paquetes</a></li>
-                            <li><a href="{{url('/mypackages/myalerts')}}">Alertados y pendientes de recibo en Miami</a></li>
-                            <li><a href="{{url('/mypackages/holdInMiami')}}">Retenidos en Miami</a></li>
-                            <li><a href="{{url('/mypackages/inTransit')}}">En tránsito</a></li>
-                            <li><a href="{{url('/mypackages/delivered')}}">Entregados</a></li>
-                            <li><a href="{{url('/mypackages/holdByInvoice')}}">Retenidos</a></li>
-                            <li><a href="{{url('/newpackage')}}">Alertanos tus compras</a></li>
+                            <li><a href="{{url('/mypackages/myalerts')}}">Paquetes sin reclamar</a></li>
+                            <li><a href="{{url('/mypackages/holdInMiami')}}">Paquetes Alertados</a></li>
+                            <li><a href="{{url('/mypackages/inTransit')}}">Paquetes en tránsito</a></li>
+                            <li><a href="{{url('/mypackages/delivered')}}">Paquetes entregados</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-search"></i>Usuarios<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fa fa-user"></i>Usuarios<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Por lista de desconocidos</a></li>
-                            <li><a href="#">Por guía aérea o # de tracking internacional</a></li>
-                            <li><a href="#">Por guía aérea o # de tracking D domestico USA emitido por la tienda</a></li>
+                            <li><a href="#">Nuevo administrador</a></li>
+                            <li><a href="#">Ver todos los administradores</a></li>
+                            <li><a href="#">Ver todos los clientes</a></li>
                         </ul>
                     </li>
                 </ul>

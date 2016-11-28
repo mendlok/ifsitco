@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('layouts.blank_admin')
 
 @push('stylesheets')
     <!-- iCheck -->
@@ -16,7 +16,7 @@
     <div class="right_col" role="main">
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i>      Usuarios Registrados</span>
+              <span class="count_top"><i class="fa fa-group"></i>      Usuarios Registrados</span>
               <div class="count">2500</div>
               <span class="count_bottom"><i class="green">4% </i>Del último mes</span>
             </div>
@@ -26,22 +26,22 @@
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> De ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-archive"></i>     Paquetes sin reclamar</span>
+              <span class="count_top"><i class="fa fa-warning"></i>     Paquetes sin reclamar</span>
               <div class="count">7325</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-archive"></i>     Paquetes entregados</span>
+              <span class="count_top"><i class="fa fa-check"></i>     Paquetes entregados</span>
               <div class="count green">2400</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-archive"></i>     Paquetes en tránsito</span>
+              <span class="count_top"><i class="fa fa-plane"></i>     Paquetes en tránsito</span>
               <div class="count">4567</div>
               <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Del ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-archive"></i>     Paquetes Alertados</span>
+              <span class="count_top"><i class="fa fa-bell"></i>     Paquetes Alertados</span>
               <div class="count">2315</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
@@ -63,7 +63,7 @@
                       <!-- required for floating -->
                       <!-- Nav tabs -->
                       <ul class="nav nav-tabs tabs-left">
-                        <li class="active"><a href="#mipack" data-toggle="tab" aria-expanded="true">Mis paquetes</a>
+                        <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-archive"></i>        Paquetes</a>
                         </li>
                         <li><a href="#user" data-toggle="tab" aria-expanded="false"><i class="fa fa-user"></i>        Usuario</a>
                         </li>
@@ -79,13 +79,13 @@
                           <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes</a>
                         </li>
 
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes sin reclamar</a>
+                        <li class=""><a href="{{url('/allpackages/undelivarable')}}" data-toggle="tab" aria-expanded="false">Paquetes sin reclamar</a>
                         </li>
-                         <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes alertados</a>
+                         <li class=""><a href="{{url('/allpackages/alert')}}"  aria-expanded="false">Paquetes alertados</a>
                         </li>
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes en tránsito</a>
+                        <li class=""><a href="{{url('/allpackages/inTransit')}}" data-toggle="tab" aria-expanded="false">Paquetes en tránsito</a>
                         </li>
-                        <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes entregados</a>
+                        <li class=""><a href="{{url('/allpackages/delivered')}}" data-toggle="tab" aria-expanded="false">Paquetes entregados</a>
                         </li>
                           </ul>
                         </div>

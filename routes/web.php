@@ -43,3 +43,12 @@ Route::get('/add_profile','ProfileController@store');
 Route::get('/mypackages/more-info/{tracking}', ['uses' =>'PackageController@infoPackage']);
 
 Route::get('/example',function(){return view('example');});
+
+//Aqui empiezan las rutas del admin//
+Route::get('/allpackages/alert','AdminController@allAlerts');
+
+Route::get('/allpackages/delivered','AdminController@alldelivered');
+
+Route::get('/allpackages/inTransit','AdminController@allinTransit');
+
+Route::get('/allpackages/undelivarable','AdminController@allundelivered');
