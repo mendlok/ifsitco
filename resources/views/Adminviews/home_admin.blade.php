@@ -79,13 +79,13 @@
                           <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes</a>
                         </li>
 
-                        <li class=""><a href="{{url('/allpackages/undelivarable')}}" data-toggle="tab" aria-expanded="false">Paquetes sin reclamar</a>
+                        <li class=""><a href="{{url('/allpackages/undelivarable')}}"  aria-expanded="false">Paquetes sin reclamar</a>
                         </li>
                          <li class=""><a href="{{url('/allpackages/alert')}}"  aria-expanded="false">Paquetes alertados</a>
                         </li>
-                        <li class=""><a href="{{url('/allpackages/inTransit')}}" data-toggle="tab" aria-expanded="false">Paquetes en tránsito</a>
+                        <li class=""><a href="{{url('/allpackages/inTransit')}}"  aria-expanded="false">Paquetes en tránsito</a>
                         </li>
-                        <li class=""><a href="{{url('/allpackages/delivered')}}" data-toggle="tab" aria-expanded="false">Paquetes entregados</a>
+                        <li class=""><a href="{{url('/allpackages/delivered')}}"  aria-expanded="false">Paquetes entregados</a>
                         </li>
                           </ul>
                         </div>
