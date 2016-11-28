@@ -76,7 +76,7 @@
                         <div class="tab-pane active" id="mipack">
                           <p class="lead">Mis paquetes</p>
                           <ul class="nav nav-tabs tabs-left">
-                          <li class=""><a href="#" data-toggle="tab" aria-expanded="false">Paquetes</a>
+                          <li class=""><a href="{{url('/allpackages')}}"  aria-expanded="false">Paquetes</a>
                         </li>
 
                         <li class=""><a href="{{url('/allpackages/undelivarable')}}"  aria-expanded="false">Paquetes sin reclamar</a>

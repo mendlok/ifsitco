@@ -8,21 +8,26 @@ use Auth;
 
 class AdminController extends Controller
 {
+    public function allPackages()
+    {
+      $packages = Package::all();
+      return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
+    }
     public function allAlerts()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::where('status','pending')->get();
         return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
     }
 
-    public function alldelivered()
+    public function allDelivered()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::where('status','delivered')->get();
         return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
     }
 
     public function allinTransit()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::where('status','transit')->get();
         return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
     }
 

@@ -47,11 +47,13 @@ Route::get('/example',function(){return view('example');});
 
 
 
+Route::get('/allpackages','AdminController@allPackages');
+
 Route::get('/home_admin','AdminController@adminHome');
 
 Route::get('/allpackages/alert','AdminController@allAlerts');
 
-Route::get('/allpackages/delivered','AdminController@alldelivered');
+Route::get('/allpackages/delivered','AdminController@allDelivered');
 
 Route::get('/allpackages/inTransit','AdminController@allinTransit');
 
