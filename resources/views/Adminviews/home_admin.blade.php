@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('layouts.blank_admin')
 
 @push('stylesheets')
     <!-- iCheck -->
@@ -118,3 +118,4 @@
 
     </script>
 @endsection
+

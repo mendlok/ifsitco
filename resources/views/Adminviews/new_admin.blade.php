@@ -1,27 +1,20 @@
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.blank_admin')
 
-    <title>IFS! | </title>
+@push('stylesheets')
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- jVectorMap -->
+    <link href="css/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+    <script src="public/js/jquery.min.js" type="text/javascript"></script>
+@endpush
 
-    <!-- Bootstrap -->
-    <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="{{ asset("css/nprogress.css") }}" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+@section('main_container')
 
-</head>
-
-<body class="login" style="margin-top: 5%;">
-
-        <section class="">
+    <!-- page content -->
+    <div class="right_col" role="main">
+    <section class="">
           <form class="form-horizontal form-label-left" novalidate="" action="{{ url('/add_profile') }}" >
               </p>
               <span class="section" style="text-align: center;">Informacion Personal </span>
@@ -147,7 +140,19 @@
               </div>
           </form>
         </section>
+  
     </div>
-</div>
-</body>
-</html>
+    <!-- /page content -->
+
+    <!-- footer content -->
+   
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".flip").click(function(){
+          $(".panel".slideToggle("slow"));
+        });
+      });
+
+    </script>
+@endsection
