@@ -74,9 +74,15 @@
                             </div>
                           </div>
                           <div class="col-xs-12 bottom text-center">
-                            <div class="col-xs-12 col-sm-6 emphasis">
-                              <button type="button" class="btn btn-primary btn-xs">
-                                <i class="fa fa-user"> </i> Ver perfil
+                            <div class="col-xs-12 col-sm-12 col-md-12 emphasis">
+                              <button type="button" class="btn btn-primary btn-xs col-md-3">
+                                 <a style="color:white;" href="{{ url('/myprofile') }}">Ver perfil</a>
+                              </button>
+                              <button type="button" class="btn btn-danger btn-xs col-md-4">
+                                 <a style="color:white;" href="{{ url('') }}">Eliminar perfil</a>
+                              </button>
+                              <button type="button" class="btn btn-warning btn-xs col-md-3">
+                                 <a style="color:white;" href="{{ url('') }}">Editar perfil</a>
                               </button>
                             </div>
                           </div>

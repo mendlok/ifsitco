@@ -66,4 +66,11 @@ class AdminController extends Controller
         $count[5] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();
         return view('Adminviews\home_admin',compact('count'));
     }
+
+       public function allinfoPackage($tracking)
+     {
+       $data['tracking'] = $tracking;
+       $profile = Profile::where('id',Auth::user()->profile_id)->get();
+       return view('bills\Admin_see_bills', compact('profile'));
+     }
 }
