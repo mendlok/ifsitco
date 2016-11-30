@@ -28,10 +28,10 @@
                     <li><a><i class="fa fa-archive"></i> Mis paquetes<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{url('/mypackages')}}">Mis paquetes</a></li>
-                            <li><a href="{{url('/mypackages/myalerts')}}">Paquetes sin reclamar</a></li>
-                            <li><a href="{{url('/mypackages/holdInMiami')}}">Paquetes Alertados</a></li>
-                            <li><a href="{{url('/mypackages/inTransit')}}">Paquetes en tránsito</a></li>
-                            <li><a href="{{url('/mypackages/delivered')}}">Paquetes entregados</a></li>
+                            <li><a href="{{url('/allpackages/undelivarable')}}">Paquetes sin reclamar</a></li>
+                            <li><a href="{{url('/allpackages/alert')}}" >Paquetes Alertados</a></li>
+                            <li><a href="{{url('/allpackages/inTransit')}}">Paquetes en tránsito</a></li>
+                            <li><a href="{{url('/allpackages/delivered')}}">Paquetes entregados</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -39,9 +39,9 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-user"></i>Usuarios<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="#">Nuevo administrador</a></li>
-                            <li><a href="#">Ver todos los administradores</a></li>
-                            <li><a href="#">Ver todos los clientes</a></li>
+                            <li><a href="{{url('/newadmin')}}">Nuevo administrador</a></li>
+                            <li><a href="{{url('/seealladmins')}}">Ver todos los administradores</a></li>
+                            <li><a href="{{url('/seealllcients')}}">Ver todos los clientes</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -58,3 +58,10 @@ Route::get('/allpackages/delivered','AdminController@allDelivered');
 Route::get('/allpackages/inTransit','AdminController@allinTransit');
 
 Route::get('/allpackages/undelivarable','AdminController@allundelivered');
+
+
+Route::get('/newadmin','AdminController@newadmin');
+
+Route::get('/seealladmins','AdminController@serachprofileadmin');
+
+Route::get('//seealllcients','AdminController@serachprofileclient');
