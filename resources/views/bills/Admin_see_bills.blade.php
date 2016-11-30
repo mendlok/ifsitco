@@ -24,10 +24,11 @@
 
             <div class="row">
               <div class="col-md-12">
+              <form action="">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Facturas</h2>
-               
+                      <h2>Facturas</h2>
+                  @foreach($profile as $info)
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -36,7 +37,6 @@
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                <form action="">
                   <section class="content invoice">
                     <!-- title row -->
                     <div class="row">
@@ -64,10 +64,10 @@
                       <div class="col-sm-4 invoice-col">
                         Para:
                         <address>
-                                  <strong>Rojas</strong>
-                                  <br>Chan Jose, Costa Rica
-                                  <br>Aserri
-                                  <br>Teléfono: 22302230
+                                  <strong>{{$info->name}} {{$info->last_name}}</strong>
+                                  <br>{{ $info->provinces}}, Costa Rica
+                                  <br>{{$info->canton}}, {{$info->district}}
+                                  <br>Teléfono: {{$info->phone}}
                                   <br>Email: johnnywow98@gmail.com
                         </address>
                       </div>
@@ -207,7 +207,7 @@
                       </tbody>
                   </table>
                 </div>
-            
+                    @endforeach
                       <div class="col-md-12 col-sm-6 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
@@ -300,8 +300,8 @@
                                   <th>Total:</th>
                                   <td> 
                                       <div class="input-group">
-                                      <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                      <input type="text" class="form-control" name="freight">
+                                        <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                        <input type="text" class="form-control" name="total">
                                       </div>
                                 </td>
                                 </tr>
@@ -321,7 +321,7 @@
                           <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i>     Imprimir Factura</button>
                           <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Hacer pago</button>
                           <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generar PDF</button>
-                          <button class="btn btn-warning pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i>  Guardar Cambios</button>
+                           <button class="btn btn-warning pull-right" name="save" style="margin-right: 5px;"><i class="fa fa-download"></i>  Guardar Cambios</button>
                         </div>
                       </div>
                     </section>

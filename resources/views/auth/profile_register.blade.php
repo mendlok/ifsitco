@@ -90,34 +90,40 @@
       </div>
       <div id="step-2" class="content form-horizontal form-label-left" style="display: none;">
           <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="first-name" name="name" required="required" class="form-control col-md-7 col-xs-12" type="text">
+              <input id="name" name="name" required="required" class="form-control col-md-7 col-xs-12" type="text">
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellidos<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lastname">Apellidos<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="last-name" name="lastname" required="required" class="form-control col-md-7 col-xs-12" type="text">
+              <input id="lastname" name="lastname" required="required" class="form-control col-md-7 col-xs-12" type="text">
             </div>
           </div>
           <div class="form-group">
-            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Idetificación<span class="required">*</span></label>
+            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Cedula<span class="required">*</span></label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="middle-name" class="form-control col-md-7 col-xs-12" name="dni" type="text">
+              <input id="id" class="form-control col-md-7 col-xs-12" name="id" type="text">
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="nacionality" class="control-label col-md-3 col-sm-3 col-xs-12">Nacionalidad<span class="required">*</span></label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="nacionality" class="form-control col-md-7 col-xs-12" name="nacionality" type="text">
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Genero</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <div id="gender" class="btn-group" data-toggle="buttons">
+              <div id="sex" class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                  <input name="gender" value="male" type="radio"> &nbsp;Hombre&nbsp;
+                  <input name="sex" value="m" type="radio"> &nbsp;Hombre&nbsp;
                 </label>
                 <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                  <input name="gender" value="female" type="radio">Mujer
+                  <input name="sex" value="f" type="radio">Mujer
                 </label>
               </div>
             </div>
@@ -163,7 +169,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12"  for="address">Dirección Exacta<span class="required">*</span></label>
+            <label for="address" class="control-label col-md-3 col-sm-3 col-xs-12"  for="address">Dirección Exacta<span class="required">*</span></label>
             <div class="col-md-6 col-sm-6 col-xs-12">
               <textarea id="address" class="form-control col-md-7 col-xs-12" name="address" type="text"></textarea>
             </div>

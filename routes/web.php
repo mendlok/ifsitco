@@ -65,3 +65,5 @@ Route::get('/newadmin','AdminController@newadmin');
 Route::get('/seealladmins','AdminController@serachprofileadmin');
 
 Route::get('//seealllcients','AdminController@serachprofileclient');
+
+Route::get('/allpackages/more-info/{tracking}', ['uses' =>'AdminController@allinfoPackage']);

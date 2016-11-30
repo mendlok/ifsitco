@@ -24,7 +24,7 @@
     </style>
     <!-- page content -->
     <div class="right_col" role="main">
-        <h1>Paquetes sin reclamar</h1>
+        <h1>Paquetes sin Reclamar</h1>
         @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
@@ -32,7 +32,7 @@
                  <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                 <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
                 <br>
-                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/mypackages/more-info/'.$package->tracking) }}">Ver producto</a>
+                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/allpackages/more-info/'.$package->tracking) }}">Ver producto</a>
                 </div>
                  <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">

@@ -23,9 +23,13 @@
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <input type="text" class="form-control" placeholder="#Cedula">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Ir!</button>
+                        <form action="{{ url('/searchByShop') }}" style="margin-top: 2%;">
+                        <div class="input-group">
+                               <button type="submit" class="btn btn-default ">Buscar</button>
+                          </div>
+                </form>
                     </span>
                   </div>
                 </div>
@@ -62,7 +66,7 @@
                             <h4 class="brief"><i>Perfil</i></h4>
                             <div class="left col-xs-7">
                               <ul class="list-unstyled">
-                                <li>Nombre:<i></i>  Mario Rodrigez</li>
+                                <li>Nombre:<i></i>  Johnny Rojas</li>
                                 <li>Cedula:<i></i> 117080225</li>
                                 <li>Sexo:<i></i> Masculino</li>
                                 <li>Telefono:<i></i> 22302230</li>
@@ -74,9 +78,15 @@
                             </div>
                           </div>
                           <div class="col-xs-12 bottom text-center">
-                            <div class="col-xs-12 col-sm-6 emphasis">
-                              <button type="button" class="btn btn-primary btn-xs">
-                                <i class="fa fa-user"> </i> Ver perfil
+                             <div class="col-xs-12 col-sm-12 col-md-12 emphasis">
+                              <button type="button" class="btn btn-primary btn-xs col-md-3">
+                                 <a style="color:white;" href="{{ url('/myprofile') }}">Ver perfil</a>
+                              </button>
+                              <button type="button" class="btn btn-danger btn-xs col-md-4">
+                                 <a style="color:white;" href="{{ url('') }}">Eliminar perfil</a>
+                              </button>
+                              <button type="button" class="btn btn-warning btn-xs col-md-3">
+                                 <a style="color:white;" href="{{ url('') }}">Editar perfil</a>
                               </button>
                             </div>
                           </div>
