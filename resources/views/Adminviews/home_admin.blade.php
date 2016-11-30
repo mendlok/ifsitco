@@ -37,12 +37,12 @@
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-plane"></i>     Paquetes en tránsito</span>
-              <div class="count">{{ $count[4] }}</div>
+              <div class="count">{{ $count[3] }}</div>
               <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i>Del ultimo mes</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-bell"></i>     Paquetes Alertados</span>
-              <div class="count">{{ $count[5] }}</div>
+              <div class="count">{{ $count[2] }}</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i>Del ultimo mes</span>
             </div>
           </div>

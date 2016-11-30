@@ -68,7 +68,7 @@
                                   <br>{{ $info->provinces}}, Costa Rica
                                   <br>{{$info->canton}}, {{$info->district}}
                                   <br>Teléfono: {{$info->phone}}
-                                  <br>Email: johnnywow98@gmail.com
+                                  <br>Email: {{$info->email}}
                         </address>
                       </div>
                       <!-- /.col -->
@@ -76,7 +76,7 @@
                         <b>Factura #007612</b>
                         <br>
                         <br>
-                        <b>Tracking:</b> 4F3S8J
+                        <b>Tracking:</b> <span class="label label-success">{{$info->tracking}}</span>
                         <br>
                         <b>Fecha de pago:</b> 18/11/2016
                       </div>
@@ -101,31 +101,31 @@
                       </tr>
                       <tr>
                           <td><b>Rastreo</b></td>
-                          <td><span data-bind="text: tax" class="ng-binding">LS033606711CN</span></td>
+                          <td><span data-bind="text: tax" class="ng-binding">{{$info->tracking}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Casillero</b></td>
-                          <td><span data-bind="text: others" class="ng-binding">CR129X19528O</span></td>
+                          <td><span data-bind="text: others" class="ng-binding">ITCO{{$info->id}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Piezas</b></td>
                           <td>
                                 <select class="selectpicker" name="number_pieces" class="btn-primary">
-                                <option value="">Seleccione una opción</option>
-                                <option value="one_piece">1 pieza</option>
-                                <option value="two_piece">2 piezas</option>
-                                <option value="three_pieces" >3 piezas</option>
-                                <option value="fourth_pieces" >4 piezas</option>
-                                <option value="more_five" >+5 piezas</option>
+                                <option value="null">Seleccione una opción</option>
+                                <option value="1">1 pieza</option>
+                                <option value="2">2 piezas</option>
+                                <option value="3" >3 piezas</option>
+                                <option value="4" >4 piezas</option>
+                                <option value="5" >+5 piezas</option>
                             </select>
                           </td>
 
                       </tr>
                       <tr>
                           <td><b>Descripcion del paquete</b></td>
-                          <td><span data-bind="text: total" class="ng-binding">Juego de consola</span></td>
+                          <td><span data-bind="text: total" class="ng-binding">{{$info->product_description}}</span></td>
 
                       </tr>
                       </tbody>
@@ -148,14 +148,14 @@
                           <td style="width: 25%">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                              <input type="text" class="form-control" name="value">
+                              <input type="text" class="form-control" name="value" value="{{$info->value}}.00" readonly="readonly">
                             </div>
                           </td>
 
                       </tr>
                       <tr>
                           <td style="width: 25%"><b>Peso</b></td>
-                          <td style="width: 25%">  
+                          <td style="width: 25%">
 
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-cubes"></i></span>
@@ -196,8 +196,8 @@
                       <tr>
                           <td><b>Estado</b></td>
                           <td>
-                            <select class="selectpicker">
-                                <option value="">Seleccione un estado</option>
+                            <select class="stade">
+                                <option value="null">Seleccione un estado</option>
                                 <option value="alert">Alertado</option>
                                 <option value="intransit">En tránsito</option>
                                 <option value="delivered" >Entregado</option>
@@ -227,7 +227,7 @@
                     <tbody>
                     <tr>
                         <td>1998/1/1</td>
-                        <td> 
+                        <td>
                         <select class="selectpicker" name="number_pieces" class="btn-primary">
                                 <option value="">Seleccione una opción</option>
                                 <option value="Reten">Retenido</option>
@@ -271,7 +271,7 @@
                                 </tr>
                                 <tr>
                                   <th>Impuesto</th>
-                                  <td> 
+                                  <td>
                                       <div class="input-group">
                                           <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
                                           <input type="text" class="form-control" name="tax">
@@ -298,7 +298,7 @@
                                 </tr>
                                 <tr>
                                   <th>Total:</th>
-                                  <td> 
+                                  <td>
                                       <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
                                         <input type="text" class="form-control" name="total">

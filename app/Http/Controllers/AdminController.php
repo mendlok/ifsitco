@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Package;
+use App\User;
 use App\Profile;
 use Illuminate\Http\Request;
 use Auth;
-
+use DB;
 class AdminController extends Controller
 {
     public function allPackages()
@@ -39,7 +40,7 @@ class AdminController extends Controller
 
     public function newadmin()
     {
-       
+
         return view('Adminviews\new_admin');
     }
 
@@ -70,7 +71,11 @@ class AdminController extends Controller
        public function allinfoPackage($tracking)
      {
        $data['tracking'] = $tracking;
-       $profile = Profile::where('id',Auth::user()->profile_id)->get();
+       $profile = DB::table('profiles')
+            ->join('users', 'users.profile_id', '=', 'profiles.id')
+            ->join('packages', 'packages.profile_id', '=', 'profiles.id')
+            ->select('users.*', 'profiles.*','packages.*')->where('packages.tracking',$tracking)
+            ->get();
        return view('bills\Admin_see_bills', compact('profile'));
      }
 }

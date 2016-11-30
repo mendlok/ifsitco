@@ -34,12 +34,21 @@ class HomeController extends Controller
     public function index()
     {
 
+      if (true) {
+        $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
+        $count[1] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();
+        $count[2] = Package::where('profile_id',Auth::user()->profile_id)->where('status','transit')->get()->count();
+        $count[3] = Package::where('profile_id',Auth::user()->profile_id)->where('status','delivered')->get()->count();
+        
+        return view('Adminviews\home_admin',compact('count'));
+      }else {
         $count[0] = Package::where('profile_id',Auth::user()->profile_id)->get()->count();
         $count[1] = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get()->count();
         $count[2] = Package::where('profile_id',Auth::user()->profile_id)->where('status','transit')->get()->count();
         $count[3] = Package::where('profile_id',Auth::user()->profile_id)->where('status','delivered')->get()->count();
 
         return view('home',compact('count'));
-      
+      }
+
     }
 }
