@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Bill;
 use Auth;
 use App\Status;
+use DB;
 class PackageController extends Controller
 {
     /**
@@ -117,7 +118,12 @@ class PackageController extends Controller
      public function infoPackage($tracking)
      {
        $data['tracking'] = $tracking;
-       $profile = Profile::where('id',Auth::user()->profile_id)->get();
+       $profile = DB::table('profiles')
+            ->join('users', 'users.profile_id', '=', 'profiles.id')
+            ->join('packages', 'packages.profile_id', '=', 'profiles.id')
+            ->join('bills', 'bills.id', '=', 'packages.guide_id')
+            ->select('users.*', 'profiles.*','packages.id as packages_ID','bills.*','packages.*')->where('packages.tracking',$tracking)
+            ->get();
        return view('bills\see_bills', compact('profile'));
      }
 

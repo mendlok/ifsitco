@@ -26,6 +26,7 @@
               <div class="col-md-12">
               <form action="{{url('/saveBill')}}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                 <div class="x_panel">
                   <div class="x_title">
                       <h2>Facturas</h2>
@@ -65,11 +66,11 @@
                       <div class="col-sm-4 invoice-col">
                         Para:
                         <address>
-                                  <strong>{{$info->name}} {{$info->last_name}}</strong>
-                                  <br>{{ $info->provinces}}, Costa Rica
-                                  <br>{{$info->canton}}, {{$info->district}}
-                                  <br>Teléfono: {{$info->phone}}
-                                  <br>Email: {{$info->email}}
+                            <strong>{{$info->name}} {{$info->last_name}}</strong>
+                            <br>{{ $info->provinces}}, Costa Rica
+                            <br>{{$info->canton}}, {{$info->district}}
+                            <br>Teléfono: {{$info->phone}}
+                            <br>Email: {{$info->email}}
                         </address>
                       </div>
                       <!-- /.col -->
@@ -196,14 +197,11 @@
                       <tr>
                           <td><b>Estado</b></td>
                           <td>
-                            @if($info->status == "alert")
                             <select class="stade">
                                 <option value="null" selected="">Seleccione un estado</option>
                                 <option value="alert" selected="true">Alertado</option>
-                            @elseif($info->status == "transit")
-                            <option value="intransit" selected="false">En tránsito</option>
-                            @endif
-                            <option value="delivered" selected="false">Entregado</option>
+                                <option value="intransit" selected="false">En tránsito</option>
+                                <option value="delivered" selected="false">Entregado</option>
                             </select>
                           </td>
                       </tr>

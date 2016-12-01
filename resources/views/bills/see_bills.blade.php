@@ -63,19 +63,19 @@
                       <div class="col-sm-4 invoice-col">
                         Para:
                         <address>
-                                  <strong>{{$info->name}} {{$info->last_name}}</strong>
-                                  <br>{{ $info->provinces}}, Costa Rica
-                                  <br>{{$info->canton}}, {{$info->district}}
-                                  <br>Teléfono: {{$info->phone}}
-                                  <br>Email: johnnywow98@gmail.com
+                          <strong>{{$info->name}} {{$info->last_name}}</strong>
+                          <br>{{ $info->provinces}}, Costa Rica
+                          <br>{{$info->canton}}, {{$info->district}}
+                          <br>Teléfono: {{$info->phone}}
+                          <br>Email: {{$info->email}}
                         </address>
                       </div>
                       <!-- /.col -->
                       <div class="col-sm-4 invoice-col">
-                        <b>Factura #007612</b>
+                        <b>Factura #{{$info->guide_id}}</b>
                         <br>
                         <br>
-                        <b>Tracking:</b> 4F3S8J
+                        <b>Tracking:</b> <span class="label label-success">{{$info->tracking}}</span>
                         <br>
                         <b>Fecha de pago:</b> 18/11/2016
                       </div>
@@ -95,27 +95,27 @@
                       </tr>
                       <tr>
                           <td style="width: 25%"><b>Guia</b></td>
-                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">DES1199364550</span></td>
+                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">IFS{{$info->packages_ID}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Rastreo</b></td>
-                          <td><span data-bind="text: tax" class="ng-binding">LS033606711CN</span></td>
+                          <td><span data-bind="text: tax" class="ng-binding">{{$info->tracking}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Casillero</b></td>
-                          <td><span data-bind="text: others" class="ng-binding">CR129X19528O</span></td>
+                          <td><span data-bind="text: others" class="ng-binding">ITCO{{$info->id}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Piezas</b></td>
-                          <td><span data-bind="text: discount" class="ng-binding">500</span></td>
+                          <td><span data-bind="text: discount" class="ng-binding">{{$info->number_pieces}}</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Descripcion del paquete</b></td>
-                          <td><span data-bind="text: total" class="ng-binding">Juego de consola</span></td>
+                          <td><span data-bind="text: total" class="ng-binding">{{$info->product_description}}</span></td>
 
                       </tr>
                       </tbody>
@@ -135,32 +135,32 @@
                       <tbody>
                       <tr>
                           <td><b>Valor declarado</b></td>
-                          <td style="width: 25%">$<span data-bind="text: freight" class="ng-binding"></span>15.000</td>
+                          <td style="width: 25%">$<span data-bind="text: freight" class="ng-binding"></span>{{$info->value}}.00</td>
 
                       </tr>
                       <tr>
                           <td style="width: 25%"><b>Peso</b></td>
-                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">  0.20LBS /0.09KGS</span></td>
+                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">{{$info->weigth}} KG</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Altura</b></td>
-                          <td><span data-bind="text: tax" class="ng-binding">   4.00 IN /4.00*2.54 CMS</span></td>
+                          <td><span data-bind="text: tax" class="ng-binding">   {{$info->heigth}} CM</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Largo </b></td>
-                          <td><span data-bind="text: others" class="ng-binding">6.00 IN /6.00*2.54 CMS</span></td>
+                          <td><span data-bind="text: others" class="ng-binding">{{$info->long}} CM</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Ancho </b></td>
-                          <td><span data-bind="text: discount" class="ng-binding">  4.00 IN /4.00*2.54 CMS</span></td>
+                          <td><span data-bind="text: discount" class="ng-binding">{{$info->width}} CM</span></td>
 
                       </tr>
                       <tr>
                           <td><b>Estado</b></td>
-                          <td><span data-bind="text: discount" class="ng-binding">Alertado</span></td>
+                          <td><span data-bind="text: discount" class="ng-binding">{{$info->status}}</span></td>
 
                       </tr>
                       </tbody>
