@@ -37,7 +37,9 @@ class PackageController extends Controller
      */
      public function mypackages()
      {
+
        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+       $packages = Package::paginate(5);
        return view('package\my_packages',compact('packages'));
 
      }
@@ -122,30 +124,35 @@ class PackageController extends Controller
      public function myAlerts()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('package\alert_pending',compact('packages'));
     }
 
      public function holdInMiami()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('package\retained',compact('packages'));
     }
 
     public function inTransit()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('package\in_transit_miami',compact('packages'));
     }
 
     public function delivered()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('package\delivered',compact('packages'));
     }
 
     public function holdByInvoice()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('package\reten_bills_commer',compact('packages'));
     }
 
