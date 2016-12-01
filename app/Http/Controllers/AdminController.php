@@ -74,8 +74,9 @@ class AdminController extends Controller
        $profile = DB::table('profiles')
             ->join('users', 'users.profile_id', '=', 'profiles.id')
             ->join('packages', 'packages.profile_id', '=', 'profiles.id')
-            ->select('users.*', 'profiles.*','packages.*')->where('packages.tracking',$tracking)
+            ->join('bills', 'bills.id', '=', 'packages.guide_id')
+            ->select('users.*', 'profiles.*','packages.id as packages_ID','bills.*','packages.*')->where('packages.tracking',$tracking)
             ->get();
-       return view('bills\Admin_see_bills', compact('profile'));
+            return view('bills\Admin_see_bills', compact('profile'));
      }
 }

@@ -74,7 +74,7 @@
                       </div>
                       <!-- /.col -->
                       <div class="col-sm-4 invoice-col">
-                        <b>Factura #007612</b>
+                        <b>Factura #{{$info->guide_id}}</b>
                         <br>
                         <br>
                         <b>Tracking:</b> <span class="label label-success">{{$info->tracking}}</span>
@@ -97,7 +97,7 @@
                       </tr>
                       <tr>
                           <td style="width: 25%"><b>Guia</b></td>
-                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">DES1199364550</span></td>
+                          <td style="width: 25%"><span data-bind="text: freight" class="ng-binding">IFS{{$info->packages_ID}}</span></td>
 
                       </tr>
                       <tr>
@@ -160,16 +160,15 @@
 
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-cubes"></i></span>
-                            <input type="text" class="form-control" name="weigth">
+                            <input type="text" class="form-control" name="weigth" value="{{$info->weigth}}">
                           </div>
-
                       </tr>
                       <tr>
                           <td><b>Altura</b></td>
                           <td>
                             <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
-                            <input type="text" class="form-control" name="height">
+                            <input type="text" class="form-control" name="height" value="{{$info->heigth}}">
                           </div>
                           </td>
 
@@ -179,7 +178,7 @@
                           <td>
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
-                              <input type="text" class="form-control" name="long">
+                              <input type="text" class="form-control" name="long" value="{{$info->long}}">
                           </div>
                           </td>
 
@@ -189,7 +188,7 @@
                           <td>
                               <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
-                              <input type="text" class="form-control" name="width">
+                              <input type="text" class="form-control" name="width" value="{{$info->width}}">
                           </div>
                           </td>
 
@@ -197,11 +196,14 @@
                       <tr>
                           <td><b>Estado</b></td>
                           <td>
+                            @if($info->status == "alert")
                             <select class="stade">
-                                <option value="null">Seleccione un estado</option>
-                                <option value="alert">Alertado</option>
-                                <option value="intransit">En tránsito</option>
-                                <option value="delivered" >Entregado</option>
+                                <option value="null" selected="">Seleccione un estado</option>
+                                <option value="alert" selected="true">Alertado</option>
+                            @elseif($info->status == "transit")
+                            <option value="intransit" selected="false">En tránsito</option>
+                            @endif
+                            <option value="delivered" selected="false">Entregado</option>
                             </select>
                           </td>
                       </tr>
