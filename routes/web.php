@@ -67,3 +67,5 @@ Route::get('/seealladmins','AdminController@serachprofileadmin');
 Route::get('//seealllcients','AdminController@serachprofileclient');
 
 Route::get('/allpackages/more-info/{tracking}', ['uses' =>'AdminController@allinfoPackage']);
+
+Route::post('/saveBill','BillController@store');

@@ -24,7 +24,8 @@
 
             <div class="row">
               <div class="col-md-12">
-              <form action="">
+              <form action="{{url('/saveBill')}}" method="post">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="x_panel">
                   <div class="x_title">
                       <h2>Facturas</h2>
@@ -112,13 +113,13 @@
                       <tr>
                           <td><b>Piezas</b></td>
                           <td>
-                                <select class="selectpicker" name="number_pieces" class="btn-primary">
+                            <select class="selectpicker" name="number_piecess" class="btn-primary">
                                 <option value="null">Seleccione una opción</option>
                                 <option value="1">1 pieza</option>
                                 <option value="2">2 piezas</option>
-                                <option value="3" >3 piezas</option>
-                                <option value="4" >4 piezas</option>
-                                <option value="5" >+5 piezas</option>
+                                <option value="3">3 piezas</option>
+                                <option value="4">4 piezas</option>
+                                <option value="5">+5 piezas</option>
                             </select>
                           </td>
 
@@ -148,7 +149,7 @@
                           <td style="width: 25%">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                              <input type="text" class="form-control" name="value" value="{{$info->value}}.00" readonly="readonly">
+                              <input type="text" class="form-control" name="declared_value" value="{{$info->value}}.00" readonly="readonly">
                             </div>
                           </td>
 
@@ -159,7 +160,7 @@
 
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-cubes"></i></span>
-                            <input type="text" class="form-control" name="weight">
+                            <input type="text" class="form-control" name="weigth">
                           </div>
 
                       </tr>
@@ -229,7 +230,7 @@
                         <td>1998/1/1</td>
                         <td>
                         <select class="selectpicker" name="number_pieces" class="btn-primary">
-                                <option value="">Seleccione una opción</option>
+                                <option value="null">Seleccione una opción</option>
                                 <option value="Reten">Retenido</option>
                                 <option value="check_contend">Revisión de contenido</option>
                                 <option value="three_pieces" >Localizado en bodega(MIA)</option>
@@ -321,7 +322,7 @@
                           <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i>     Imprimir Factura</button>
                           <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Hacer pago</button>
                           <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generar PDF</button>
-                           <button class="btn btn-warning pull-right" name="save" style="margin-right: 5px;"><i class="fa fa-download"></i>  Guardar Cambios</button>
+                          <button  type="imput" class="btn btn-warning pull-right" name="save" style="margin-right: 5px;"><i class="fa fa-download"></i>  Guardar Cambios</button>
                         </div>
                       </div>
                     </section>

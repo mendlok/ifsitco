@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use App\Package;
 use App\Profile;
 use Illuminate\Http\Request;
+use App\Bill;
 use Auth;
+use App\Status;
 class PackageController extends Controller
 {
     /**
@@ -46,6 +48,9 @@ class PackageController extends Controller
 
     public function store(Request $request)
     {
+        $bill = new Bill();
+        $status = new Status();
+        $bill ->save();
         $courrier = $request['carrier'];
         $tracking = $request['tracking'];
         $shop = $request['shop'];
@@ -58,6 +63,7 @@ class PackageController extends Controller
         $package ->shop = $shop;
         $package ->value = $value;
         $package ->product_description = $description;
+        $package ->guide_id = $bill->id;
         $package->profile_id = Auth::user()->profile_id;
         $package->save();
         return redirect()->back();

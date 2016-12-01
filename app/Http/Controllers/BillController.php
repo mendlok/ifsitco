@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Bill;
+use App\Package;
 use Illuminate\Http\Request;
 
 class BillController extends Controller
@@ -23,7 +24,7 @@ class BillController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -34,8 +35,32 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        $np = $request['number_pieces'];
+        $number_pieces = $request['number_piecess'];
         $state = $request['stade'];
+        $declared_value = $request['declared_value'];
+        $weigth = $request['weigth'];
+        $heigth = $request['height'];
+        $long = $request['long'];
+        $width = $request['width'];
+        $description = Package::where('id','2')->pluck('product_description');
+        $insurance = $request['insurance'];
+        $freights = $request['freights'];
+        $tax = $request['tax'];
+        $discount = $request['discount'];
+
+
+        $bill->declared_value = $declared_value;
+        $bill->long = $long;
+        $bill->width = $width;
+        $bill->heigth = $heigth;
+        $bill->number_pieces = $number_pieces;
+        $bill->weigth = $weigth;
+        $bill->description = $description->toArray()[0];
+
+        return redirect()->back();
+
+
+
     }
 
     /**
