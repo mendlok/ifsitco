@@ -35,7 +35,7 @@
 
                 @include('includes/sidebar_admin')
 
-                @include('includes/topbar')
+                @include('includes/topbar_admin')
 
                 @yield('main_container')
 

@@ -18,29 +18,34 @@ class AdminController extends Controller
     public function allPackages()
     {
       $packages = Package::all();
+      $packages = Package::paginate(5);
       return view('Adminviews\PackageAdmin\admin_package_all',compact('packages'));
     }
     public function allAlerts()
     {
         $packages = Package::where('status','pending')->get();
+        $packages = Package::paginate(5);
         return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
     }
 
     public function allDelivered()
     {
         $packages = Package::where('status','delivered')->get();
+        $packages = Package::paginate(5);
         return view('Adminviews\PackageAdmin\Admin_package_delivered',compact('packages'));
     }
 
     public function allinTransit()
     {
         $packages = Package::where('status','transit')->get();
+        $packages = Package::paginate(5);
         return view('Adminviews\PackageAdmin\Admin_package_transit',compact('packages'));
     }
 
     public function allundelivered()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
+        $packages = Package::paginate(5);
         return view('Adminviews\PackageAdmin\Admin_package_undeliverable',compact('packages'));
     }
 

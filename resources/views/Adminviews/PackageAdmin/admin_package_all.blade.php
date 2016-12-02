@@ -74,6 +74,7 @@
             </div>
         </div>
         @endforeach
+        {{ $packages->links()}}
         @endif
     </div>
     <!-- /page content -->
