@@ -92,6 +92,15 @@ class PackageController extends Controller
       return view('search\search_tracking_shop',compact('package','total'));
     }
 
+     public function showAmintracking(Request $request)
+    {
+
+      $track = $request['track'];
+      $total = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get()->count();
+      $package = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get();
+      return view('search\search_tracking_shop',compact('package','total'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

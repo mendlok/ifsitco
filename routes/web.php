@@ -36,6 +36,8 @@ Route::get('/mypackages/holdByInvoice','PackageController@holdByInvoice');
 
 Route::get('/searchByShop','PackageController@showShopTracking');
 
+Route::get('/searchByAdmin','PackageController@showAmintracking');
+
 Route::get('/add_package','PackageController@store');
 
 Route::get('/add_profile','ProfileController@store');
