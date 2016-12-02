@@ -11,20 +11,12 @@
 
 @section('main_container')
 
-
-    <style>
-
-      .centered-items tr > td{
-      text-align: center;
-      }
-
-      .centered-head tr > th{
-        text-align: center;
-      }
-    </style>
     <!-- page content -->
     <div class="right_col" role="main">
         <h1>Mis paquetes</h1>
+        @if($packages->isEmpty() === true)
+          <h2 style="text-align:center; font-size:2.5em">No hay paquetes disponibles</h2>
+        @else
         @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
@@ -82,7 +74,7 @@
             </div>
         </div>
         @endforeach
-        {{ $packages->links()}}
+        @endif
     </div>
     <!-- /page content -->
 

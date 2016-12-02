@@ -7,12 +7,18 @@ use App\Profile;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use Carbon\Carbon;
+
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function allPackages()
     {
       $packages = Package::all();
-      return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
+      return view('Adminviews\PackageAdmin\admin_package_all',compact('packages'));
     }
     public function allAlerts()
     {
@@ -23,19 +29,19 @@ class AdminController extends Controller
     public function allDelivered()
     {
         $packages = Package::where('status','delivered')->get();
-        return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
+        return view('Adminviews\PackageAdmin\Admin_package_delivered',compact('packages'));
     }
 
     public function allinTransit()
     {
         $packages = Package::where('status','transit')->get();
-        return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
+        return view('Adminviews\PackageAdmin\Admin_package_transit',compact('packages'));
     }
 
     public function allundelivered()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        return view('Adminviews\PackageAdmin\Admin_package_alert',compact('packages'));
+        return view('Adminviews\PackageAdmin\Admin_package_undeliverable',compact('packages'));
     }
 
     public function newadmin()
@@ -71,12 +77,14 @@ class AdminController extends Controller
        public function allinfoPackage($tracking)
      {
        $data['tracking'] = $tracking;
+       $date = Carbon::now();
+       $date = $date->format('d-m-Y');
        $profile = DB::table('profiles')
             ->join('users', 'users.profile_id', '=', 'profiles.id')
             ->join('packages', 'packages.profile_id', '=', 'profiles.id')
             ->join('bills', 'bills.id', '=', 'packages.guide_id')
             ->select('users.*', 'profiles.*','packages.id as packages_ID','bills.*','packages.*')->where('packages.tracking',$tracking)
             ->get();
-            return view('bills\Admin_see_bills', compact('profile'));
+            return view('bills\Admin_see_bills', compact('profile','date'));
      }
 }

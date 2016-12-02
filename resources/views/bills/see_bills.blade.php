@@ -42,7 +42,7 @@
                       <div class="col-xs-12 invoice-header">
                         <h1>
                             <i class="fa fa-globe"></i> IFS Factura
-                            <small class="pull-right">Fecha: 18/11/2016</small>
+                            <small class="pull-right">Fecha:{{$date}} </small>
                         </h1>
                       </div>
                       <!-- /.col -->
@@ -52,11 +52,11 @@
                       <div class="col-sm-4 invoice-col">
                         De:
                         <address>
-                            <strong>Iron Admin, Inc.</strong>
-                            <br>795 Freedom Ave, Suite 600
-                            <br>New York, CA 94107
-                            <br>Teléfono: 1 (804) 123-9876
-                            <br>Email: ironadmin.com
+                            <strong>International Freight Solutions, Inc.</strong>
+                            <br>Zapote frente archivo nacional contiguo a restaurante GARIBALDI.
+                            <br>Zapote, San Jose, Costa Rica
+                            <br>Teléfono:(506)2253 8287
+                            <br>Email: arnaldofallas@ifscr.com
                         </address>
                       </div>
                       <!-- /.col -->
@@ -167,35 +167,13 @@
                   </table>
                 </div>
                   @endforeach
-                      <div class="col-md-12 col-sm-6 col-xs-12">
-        <div class="x_panel">
-            <div class="x_title">
-                <h2>Estatus</h2>
 
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Estatus</th>
-                        <th>Comentarios</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1998/1/1</td>
-                        <td>Cerrado</td>
-                        <td>Entregado</td>
-                    </tr>
+                <div class="container progress">
+                <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 60%" id="progress">
+                  <span class="sr-only">40% Complete (success)</span>
+                </div>
+              </div>
 
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
                   <div class="col-md-12">
                   <div class="col-xs-6">
                            <div class="col-xs-12">
@@ -268,6 +246,7 @@
         $(".flip").click(function(){
           $(".panel".slideToggle("slow"));
         });
+        
       });
 
     </script>

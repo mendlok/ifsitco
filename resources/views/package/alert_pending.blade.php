@@ -13,7 +13,10 @@
 
     <!-- page content -->
     <div class="right_col" role="main">
-        <h1>Alertados y pendientes de recivo en Miami</h1>
+        <h1>Alertados y pendientes de recibo en Miami</h1>
+        @if($packages->isEmpty() === true)
+          <h2 style="text-align:center; font-size:2.5em">No hay paquetes alertadoso</h2>
+        @else
         @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
@@ -71,11 +74,11 @@
             </div>
         </div>
         @endforeach
-        {{ $packages->links()}}
+        @endif
     </div>
     <!-- /page content -->
 
     <!-- footer content -->
-    
+
     <!-- /footer content -->
 @endsection

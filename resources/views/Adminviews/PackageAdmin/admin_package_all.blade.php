@@ -13,9 +13,9 @@
 
     <!-- page content -->
     <div class="right_col" role="main">
-        <h1>Paquetes en transito</h1>
+        <h1>Todos los paquetes</h1>
         @if($packages->isEmpty() === true)
-          <h2 style="text-align:center; font-size:2.5em">No hay paquetes en transito</h2>
+          <h2 style="text-align:center; font-size:2.5em">No hay paquetes</h2>
         @else
         @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">

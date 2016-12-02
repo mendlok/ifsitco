@@ -8,6 +8,8 @@ use App\Bill;
 use Auth;
 use App\Status;
 use DB;
+use Carbon\Carbon;
+
 class PackageController extends Controller
 {
     /**
@@ -15,7 +17,10 @@ class PackageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
 
     public function index()
     {
@@ -80,6 +85,7 @@ class PackageController extends Controller
      */
     public function showShopTracking(Request $request)
     {
+
       $track = $request['track'];
       $total = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get()->count();
       $package = Package::where('tracking',$track)->where('profile_id',Auth::user()->profile_id)->get();
@@ -118,13 +124,20 @@ class PackageController extends Controller
      public function infoPackage($tracking)
      {
        $data['tracking'] = $tracking;
+       $date = Carbon::now();
+       $date = $date->format('d-m-Y');
        $profile = DB::table('profiles')
             ->join('users', 'users.profile_id', '=', 'profiles.id')
             ->join('packages', 'packages.profile_id', '=', 'profiles.id')
             ->join('bills', 'bills.id', '=', 'packages.guide_id')
             ->select('users.*', 'profiles.*','packages.id as packages_ID','bills.*','packages.*')->where('packages.tracking',$tracking)
             ->get();
-       return view('bills\see_bills', compact('profile'));
+      $status = $profile->pluck('status')->toArray()[0];
+      if ($status === "pending") {
+        return view('package\pending_package',compact('profile','date'));
+      }else {
+        return view('bills\see_bills', compact('profile','date'));
+      }
      }
 
 
@@ -135,36 +148,31 @@ class PackageController extends Controller
 
      public function myAlerts()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        $packages = Package::paginate(5);
+        $packages = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get();
         return view('package\alert_pending',compact('packages'));
     }
 
      public function holdInMiami()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        $packages = Package::paginate(5);
+        $packages = Package::where('profile_id',Auth::user()->profile_id)->where('status','pending')->get();
         return view('package\retained',compact('packages'));
     }
 
     public function inTransit()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        $packages = Package::paginate(5);
+        $packages = Package::where('profile_id',Auth::user()->profile_id)->where('status','transit')->get();
         return view('package\in_transit_miami',compact('packages'));
     }
 
     public function delivered()
     {
-        $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        $packages = Package::paginate(5);
+        $packages = Package::where('profile_id',Auth::user()->profile_id)->where('status','delivered')->get();
         return view('package\delivered',compact('packages'));
     }
 
     public function holdByInvoice()
     {
         $packages = Package::where('profile_id',Auth::user()->profile_id)->get();
-        $packages = Package::paginate(5);
         return view('package\reten_bills_commer',compact('packages'));
     }
 

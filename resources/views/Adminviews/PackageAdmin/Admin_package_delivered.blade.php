@@ -11,20 +11,12 @@
 
 @section('main_container')
 
-
-    <style>
-
-      .centered-items tr > td{
-      text-align: center;
-      }
-
-      .centered-head tr > th{
-        text-align: center;
-      }
-    </style>
     <!-- page content -->
     <div class="right_col" role="main">
-        <h1>Paquetes Entregados</h1>
+        <h1>Paquetes entregados</h1>
+        @if($packages->isEmpty() === true)
+          <h2 style="text-align:center; font-size:2.5em">No hay paquetes entregados</h2>
+        @else
         @foreach($packages as $package)
         <div class="container menu" style="background-color: white;border-top: solid;">
             <div class="rows" style="margin:2%;">
@@ -32,7 +24,7 @@
                  <div class="col-lg-2 col-sm-6 col-xs-12 " style="margin-bottom: 5%;">
                 <img src="{{ asset('images/box.png') }}" class="img-responsive fotos" style="height: 125px;">
                 <br>
-                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/allpackages/more-info/'.$package->tracking) }}">Ver producto</a>
+                  <a class="btn btn-primary acomodo-but" style="margin-left: 10%;" href="{{ url('/mypackages/more-info/'.$package->tracking) }}">Ver producto</a>
                 </div>
                  <div class="col-md-10 col-sm-6 col-xs-12">
                 <div class="x_panel">
@@ -49,8 +41,6 @@
                     <table class="col-md-12" >
                       <thead class="centered-head" >
                         <tr>
-                          <th class="col-md-2">Usuario</th>
-                          <th class="col-md-2">Cedula</th>
                           <th class="col-md-2">Courier</th>
                           <th class="col-md-2">Tracking</th>
                           <th class="col-md-2" >Descrición</th>
@@ -61,8 +51,6 @@
                       </thead>
                       <tbody class="centered-items">
                       <tr>
-                          <td class="col-md-2">Kenneth</td>
-                          <td class="col-md-2">117150952</td>
                          <td class="col-md-2">{{$package->courrier}}</td>
                           <td class="col-md-2">{{$package->tracking}}</td>
                           <td class="col-md-2">{{$package->product_description}}</td>
@@ -86,6 +74,7 @@
             </div>
         </div>
         @endforeach
+        @endif
     </div>
     <!-- /page content -->
 

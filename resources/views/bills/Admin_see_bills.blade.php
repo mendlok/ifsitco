@@ -45,7 +45,7 @@
                       <div class="col-xs-12 invoice-header">
                         <h1>
                             <i class="fa fa-globe"></i> IFS Factura
-                            <small class="pull-right">Fecha: 18/11/2016</small>
+                            <small class="pull-right">Fecha: {{$date}}</small>
                         </h1>
                       </div>
                       <!-- /.col -->
@@ -55,11 +55,13 @@
                       <div class="col-sm-4 invoice-col">
                         De:
                         <address>
-                            <strong>Iron Admin, Inc.</strong>
-                            <br>795 Freedom Ave, Suite 600
-                            <br>New York, CA 94107
-                            <br>Teléfono: 1 (804) 123-9876
-                            <br>Email: ironadmin.com
+                          <address>
+                              <strong>International Freight Solutions, Inc.</strong>
+                              <br>Zapote frente archivo nacional contiguo a restaurante GARIBALDI.
+                              <br>Zapote, San Jose, Costa Rica
+                              <br>Teléfono:(506)2253 8287
+                              <br>Email: arnaldofallas@ifscr.com
+                          </address>
                         </address>
                       </div>
                       <!-- /.col -->
@@ -116,11 +118,11 @@
                           <td>
                             <select class="selectpicker" name="number_piecess" class="btn-primary">
                                 <option value="null">Seleccione una opción</option>
-                                <option value="1">1 pieza</option>
-                                <option value="2">2 piezas</option>
-                                <option value="3">3 piezas</option>
-                                <option value="4">4 piezas</option>
-                                <option value="5">+5 piezas</option>
+                                <option value="1" selected="op1">1 pieza</option>
+                                <option value="2" selected="op2">2 piezas</option>
+                                <option value="3" selected="op3">3 piezas</option>
+                                <option value="4" selected="op4">4 piezas</option>
+                                <option value="5" selected="op5">+5 piezas</option>
                             </select>
                           </td>
 
@@ -208,7 +210,9 @@
                       </tbody>
                   </table>
                 </div>
-                    @endforeach
+
+
+
                       <div class="col-md-12 col-sm-6 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
@@ -275,7 +279,7 @@
                                   <td>
                                       <div class="input-group">
                                           <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                          <input type="text" class="form-control" name="tax">
+                                          <input type="number" class="form-control" name="tax" min="1" max="100" value="1">
                                       </div>
                             </td>
                                 </tr>
@@ -284,7 +288,7 @@
                                   <td>
                                     <div class="input-group">
                                       <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                      <input type="text" class="form-control" name="freight">
+                                      <input type="text" class="form-control" name="freight" value="">
                                     </div>
                                   </td>
                                 </tr>
@@ -293,16 +297,25 @@
                                   <td>
                                       <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                        <input type="text" class="form-control" name="discount">
+                                        <input type="text" class="form-control" name="discount" value="">
                                     </div>
                                   </td>
+                                </tr>
+                                <tr>
+                                  <th>Sub Total:</th>
+                                  <td>
+                                      <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                        <input type="text" class="form-control"  name="subtotal" value="0">
+                                      </div>
+                                </td>
                                 </tr>
                                 <tr>
                                   <th>Total:</th>
                                   <td>
                                       <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                        <input type="text" class="form-control" name="total">
+                                        <input type="text" class="form-control" id="total" name="total" value="{{$info->value}}">
                                       </div>
                                 </td>
                                 </tr>
@@ -333,16 +346,23 @@
             </div>
           </div>
     </div>
+    @endforeach
     <!-- /page content -->
 
     <!-- footer content -->
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $(".flip").click(function(){
           $(".panel".slideToggle("slow"));
         });
+        var total = $('input:text[name=total]').val();
+        var tax = $('input:text[name=tax]').val();
+        var subtotal = tax * total / 100;
+        alert(tax);
+        $('input:text[name=subtotal]').val(200);
+
       });
 
     </script>
